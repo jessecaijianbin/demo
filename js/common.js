@@ -6,8 +6,8 @@
 */
 
 $(function(){
-    /*$(".headTitle").load("../tpl/header.html");
-    $(".nav").load("../tpl/nav.html");*/
+    $(".headTitle").load("../tpl/header.html");
+    $(".nav").load("../tpl/nav.html");
 });
 // 全选
 function selectAll(all,childInput,childrenInputLength,inputCheckedLength){
