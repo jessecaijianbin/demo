@@ -1,0 +1,744 @@
+.boxsizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+//按钮的渐变
+.gradient {
+  background: #30b0fd;
+  background: -moz-linear-gradient(left, #30b0fd 0%, #1f94f3 100%);
+  background: -webkit-linear-gradient(left, #30b0fd 0%,#1f94f3 100%);
+  background: linear-gradient(to right, #30b0fd 0%,#1f94f3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30b0fd', endColorstr='#1f94f3',GradientType=1 );
+}
+select {
+  padding: 0 12px;
+  .boxsizing;
+  border: solid 1px #dcdcdc;
+  /*将默认的select选择框样式清除*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  /*在选择框的最右侧中间显示小箭头图片*/
+  background: url("../img/selectPic.png") no-repeat scroll 93% center transparent;
+  /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+  padding-right: 18px;
+}
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select::-ms-expand { display: none; }
+.error{
+  color: red !important;
+  text-align: center;
+  //width: 100px;
+  //position: absolute;
+  //bottom: -29px;
+  //left: 80px;
+  //font-size: 12px;
+  //width: 178px;
+  //text-align: center;
+}
+//radio选择的样式
+input[name=checkOne],
+input[name=checkOne-2],
+input[name=checkboxSelect]{
+  display: none;
+}
+label[name=checkOne],
+label[name=checkOne-2] {
+  padding-left: 30px;
+  .boxsizing;
+  background: url(../img/radioVisible.png) left center no-repeat;
+  color: #666;
+  cursor: pointer;
+}
+input[name=checkOne]:checked + label[name=checkOne],
+input[name=checkOne-2]:checked + label[name=checkOne-2]{
+  background: url(../img/radioChecked.png) left center no-repeat;
+}
+
+//checkbox选择的样式
+label[name=checkboxSelect]{
+  padding-left:22px;
+  .boxsizing;
+  margin-right: 50px;
+  background: url(../img/checkboxVisible.png) left center no-repeat;
+  cursor: pointer;
+}
+input[name=checkboxSelect]:checked + label[name=checkboxSelect]{
+  background: url(../img/checkboxChecked.png) left center no-repeat;
+}
+
+//列表中的全选
+.emergencySelectCon td label[name=checkboxSelect],
+.dataAbnormalCon td label[name=checkboxSelect],
+.siteInfoCon td label[name=checkboxSelect],
+.equipInfoCon td label[name=checkboxSelect],
+.addPerameter td label[name=checkboxSelect],
+.editPerameter td label[name=checkboxSelect],
+.instrumentCon td label[name=checkboxSelect],
+.editInstrumentPara td label[name=checkboxSelect],
+.addInstrumentPara td label[name=checkboxSelect],
+.videoCon td label[name=checkboxSelect],
+.linkSiteListCon td label[name=checkboxSelect],
+.editStandard td label[name=checkboxSelect],
+.addStd td label[name=checkboxSelect],
+.messageAlarmListCon td label[name=checkboxSelect] {
+  height: 17px;
+  margin-right: 0;
+  margin-top: 9px;
+}
+.emergencySelectCon th label[name=checkboxSelect],
+.dataAbnormalCon th label[name=checkboxSelect],
+.siteInfoCon th label[name=checkboxSelect],
+.equipInfoCon th label[name=checkboxSelect],
+.addPerameter th label[name=checkboxSelect],
+.editPerameter th label[name=checkboxSelect],
+.instrumentCon th label[name=checkboxSelect],
+.editInstrumentPara th label[name=checkboxSelect],
+.addInstrumentPara th label[name=checkboxSelect],
+.videoCon th label[name=checkboxSelect],
+.linkSiteListCon th label[name=checkboxSelect],
+.editStandard th label[name=checkboxSelect],
+.addStd th label[name=checkboxSelect],
+.messageAlarmListCon th label[name=checkboxSelect] {
+  height: 17px;
+  margin-right: 0;
+}
+//确定按钮
+.determine,
+.monitor-add-perameter,
+.searchParameter,
+.monitorSearch,
+.linkSiteList-search,
+.addStandard,
+.alarmSearch,
+.historySearch,
+.outData,
+.messageSearch,
+.addPeople,
+.addaddPeople {
+  display: inline-block;
+  width: 90px;
+  height: 40px;
+  .gradient;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 4px;
+}
+
+@titleHeight: 86px;
+body, html {
+  background: #f4fafb;
+}
+.wrap {
+  width: 100%;
+  min-width: 1440px;
+  padding-top: @titleHeight;
+  .boxsizing;
+}
+// 头部
+.headTitle {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  height: @titleHeight;
+  min-width: 1440px;
+  padding-left: 36px;
+  padding-right: 16px;
+  .boxsizing;
+  background: #006ef1;
+  background: -moz-linear-gradient(left, #006ef1 0%, #30b0fd 100%);
+  background: -webkit-linear-gradient(left, #006ef1 0%,#30b0fd 100%);
+  background: linear-gradient(to right, #006ef1 0%,#30b0fd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006ef1', endColorstr='#30b0fd',GradientType=1 );
+}
+.titleName {
+  line-height: @titleHeight;
+  font-size: 30px;
+  color: white;
+  font-family: "SimHei";
+  text-decoration: none;
+}
+.headTitle .set {
+  float: right;
+}
+.logout {
+  float: right;
+  i {
+    float: right;
+    line-height: @titleHeight;
+    font-family: "SimHei";
+    font-size: 16px;
+    color: white;
+    font-style: normal;
+  }
+  span {
+    float: right;
+    width: 20px;
+    height: @titleHeight;
+    margin-right: 8px;
+    margin-left: 20px;
+    background: url(../img/logout.png) center center no-repeat;
+  }
+}
+.headerline {
+  float: right;
+  width: 1px;
+  height: @titleHeight;
+  background: url(../img/line.png) center center no-repeat;
+}
+.message {
+  position: relative;
+  float: right;
+  width: 20px;
+  height: @titleHeight;
+  margin-right: 18px;
+  margin-left: 22px;
+  background: url(../img/message.png) center center no-repeat;
+  strong {
+    @strongHeight: 20px;
+    position: absolute;
+    top: 25px;
+    right: -6px;
+    width: @strongHeight;
+    height: @strongHeight;
+    border-radius: @strongHeight;
+    background: #f93636;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    line-height: @strongHeight;
+    -ms-transform: scale(0.50);
+    -webkit-transform: scale(0.50);
+    -moz-transform: scale(0.50);
+    -o-transform: scale(0.50);
+    transform: scale(0.50);
+  }
+}
+.user {
+  float: right;
+  var {
+    float: right;
+    margin-left: 6px;
+    color: white;
+    font-size: 14px;
+    line-height: @titleHeight;
+    i {
+      font-style: normal;
+    }
+  }
+  div {
+    @imgHeight: 30px;
+    float: right;
+    width: @imgHeight;
+    height: @titleHeight;
+    padding-top: 30px;
+    .boxsizing;
+    img {
+      display: block;
+      width: 100%;
+      height: @imgHeight;
+      border-radius: @imgHeight;
+    }
+  }
+}
+// 导航
+.nav {
+  position: fixed;
+  top: @titleHeight;
+  left: 0;
+  bottom: 0;
+  width: 15%;
+  height: 100%;
+  min-width: 210px;
+  background: white;
+  
+}
+.navDiv {
+  overflow: auto;
+  height: 100%;
+}
+.navUl {
+  min-height: 900px;
+    >li {
+      @outerLiHegiht: 66px;
+      padding-left: 9%;
+      .boxsizing;
+      >a {
+        display: block;
+        width: 100%;
+        height: @outerLiHegiht;
+        font-size: 19px;
+        color: #666;
+        line-height: @outerLiHegiht;
+        // text-indent: 17%;
+        background: url(../img/bottom.png) 93% center no-repeat;
+        span {
+          float: left;
+          width: 20px;
+          height: @outerLiHegiht;
+          margin-right: 8%;
+        }
+        var {
+          float: left;
+        }
+      }
+      >a:after {
+        content:"\200B";
+        display:block;
+        height:0;
+        clear:both;
+      }
+      ol {
+        display: none;
+        @innerLiHeight: 60px;
+        >li {
+          padding-left: 16%;
+          .boxsizing;
+          a {
+            display: block;
+            width: 100%;
+            height: @innerLiHeight;
+            line-height: @innerLiHeight;
+            color: #666;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    li.active >a {
+      color: #2eadfc;
+    }
+    li.active ol {
+      display: block;
+    }
+    >li.open >a {
+      background: url(../img/top.png) 93% center no-repeat;
+    }
+  }
+.ecological >a span {
+  background: url(../img/nav.png) -250px 10px no-repeat;
+}
+.ecological.active >a span {
+  background: url(../img/nav.png) -290px 10px no-repeat;
+}
+.map >a span {
+  background: url(../img/nav.png) -50px 10px no-repeat;
+}
+.map.active >a span {
+  background: url(../img/nav.png) -370px 10px no-repeat;
+}
+.site >a span {
+  background: url(../img/nav.png) -650px 10px no-repeat;
+}
+.site.active >a span {
+  background: url(../img/nav.png) -690px 10px no-repeat;
+}
+.dataManage >a span {
+  background: url(../img/nav.png) -330px 10px no-repeat;
+}
+.dataManage.active >a span {
+  background: url(../img/nav.png) -10px 10px no-repeat;
+}
+.reportForm >a span {
+  background: url(../img/nav.png) -410px 10px no-repeat;
+}
+.reportForm.active >a span {
+  background: url(../img/nav.png) -450px 10px no-repeat;
+}
+.chart >a span {
+  background: url(../img/nav.png) -490px 10px no-repeat;
+}
+.chart.active >a span {
+  background: url(../img/nav.png) -530px 10px no-repeat;
+}
+.monitorStandard >a span {
+  background: url(../img/nav.png) -170px 10px no-repeat;
+}
+.monitorStandard.active >a span {
+  background: url(../img/nav.png) -210px 10px no-repeat;
+}
+.alarm >a span {
+  background: url(../img/nav.png) -90px 10px no-repeat;
+}
+.alarm.active >a span {
+  background: url(../img/nav.png) -130px 10px no-repeat;
+}
+.systemSetup >a span {
+  background: url(../img/nav.png) -570px 10px no-repeat;
+}
+.systemSetup.active >a span {
+  background: url(../img/nav.png) -610px 10px no-repeat;
+}
+.wrapCon {
+  float: right;
+  width: 85%;
+  height: 100%;
+}
+// 当前位置：
+.nowAddr {
+  width: 100%;
+  height: 50px;
+  padding: 0 18px;
+  .boxsizing;
+  background: white;
+  line-height: 50px;
+  span {
+    float: left;
+    color: #666;
+  }
+  p {
+    color: #333;
+    .contentName {
+      color: #bfbfbf;
+    }
+    .navName {
+      color: #333;
+    }
+  }
+}
+// 右侧内容框(有树搜索)
+.dataAndLongRangeCon,
+.runsetTabCon,
+.infoManage,
+.equipTabCon,
+.realAlarm {
+  padding: 20px 50px 20px 20px;
+  .boxsizing;
+}
+//框框的标题和阴影
+.screen,
+.instrumentLog,
+.routineSet,
+.dataAbnormal,
+.parameterExceedStandard,
+.emergencySet,
+.emergencySelect,
+.longRangeSelect,
+.longRangeLog,
+.infoManageSelect,
+.siteInfo,
+.equipInfo,
+.instrument,
+.video,
+.monitorSelect,
+.monitorSd,
+.realAlarmSelect,
+.realAlarmList,
+.historyAlarmSelect,
+.historyAlarmList,
+.messageAlarmSelect,
+.messageAlarmList {
+  padding: 0 24px;
+  .boxsizing;
+  background: white;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  box-shadow: 3px 3px 10px #e8eff3;
+  h2 {
+    height: 46px;
+    border-bottom: 1px solid #efefef;
+    line-height: 36px;
+    var {
+      border-left: 3px solid #20bbfe;
+      font-size: 19px;
+      color: #2b2b2b;
+      padding-left: 14px;
+      .boxsizing;
+    }
+  }
+}
+.routineSet h2 span,
+.dataAbnormal h2 span,
+.parameterExceedStandard h2 span,
+.emergencySet h2 span {
+  font-size: 16px;
+  color: #666;
+}
+//详细和删除
+.equipInfoCon,
+.instrumentCon,
+.videoCon,
+.monitorSdCon,
+.messageAlarmListCon {
+  td {
+    line-height: 33px !important;
+    span {
+      display: inline-block;
+      padding-left: 22px;
+      .boxsizing;
+      cursor: pointer;
+    }
+    .equipInfo-detail,
+    .instrument-detail,
+    .video-detail,
+    .monitor-detail,
+    .message-detail {
+      margin-right: 28px;
+      background: url(../img/detail.png) left center no-repeat;
+      color: #ff9b42;
+    }
+    .equipInfo-delete,
+    .instrument-delete,
+    .video-delete,
+    .monitor-delete,
+    .message-delete {
+      background: url(../img/delete.png) left center no-repeat;
+      color: #ff4141;
+    }
+  }
+}
+//tab切换
+@tabColor: #2eadfc;
+.runsetTab,
+.equipTab,
+.alarmTab {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  .boxsizing;
+  background: white;
+  span {
+    float: left;
+    width: 156px;
+    height: 38px;
+    margin-right: 60px;
+    color: #333;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+    font-size: 18px;
+    cursor: pointer;
+    cursor: hand;
+  }
+  span.selected {
+    color: @tabColor;
+    border-bottom: 2px solid @tabColor;
+  }
+}
+.runsetTabCon,
+.equipTabCon,
+.alarmCon {
+  >div {
+    display: none;
+  }
+  >div.selected {
+    display: block;
+  }
+}
+//新增站点
+.siteInfo-add,
+.equipInfo-add,
+.instrument-add,
+.video-add,
+.addMonitor,
+.messageAdd {
+  float: right;
+  padding-left: 26px;
+  background: url(../img/addNew.png) left center no-repeat;
+  font-size: 14px;
+  color: #2eadfc;
+  line-height: 46px;
+}
+//批量删除
+.deleteBatch,
+.equipInfo-deleteBatch,
+.instrument-deleteBatch,
+.video-deleteBatch,
+.message-deleteBatch {
+  display: block;
+  width: 104px;
+  height: 40px;
+  margin: 0 auto;
+  background: #fd746e;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+//不能为空的*
+.addSite li >div,
+.equip-info li >div,
+.editInstrument-info li >div,
+.addInstrument-info li >div,
+.addVideo-info li >div,
+.addVideoPara li > div,
+.siteDetail li >div,
+.editVideo li >div,
+.editVideoPara li > div,
+.editStandard >div,
+.addStd >div{
+  position: relative;
+  margin-right: 54px !important;
+}
+.addSite li >div >span,
+.siteDetail li >div >span,
+.equip-info li >div >span,
+.editInstrument-info li >div >span,
+.addInstrument-info li >div >span,
+.addVideo-info li >div >span,
+.addVideoPara li > div >span,
+.editVideo li >div >span,
+.editVideoPara li > div >span,
+.editStandard >div >span,
+.addStd >div >span{
+  position: absolute;
+  float: left;
+  width: 32px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fc3c3c;
+}
+//搜索树
+.treeSearchContain {
+  position: static;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.treeSearchContain.show {
+  position: fixed;
+}
+.treeSearch {
+  position: fixed;
+  z-index: 99999;
+  top:30%;
+  right: -294px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px 0px 0px 6px;
+  background: white;
+  h3 {
+    height: 48px;
+    padding: 0 10px;
+    .boxsizing;
+    line-height: 48px;
+    border-bottom: 1px solid #dcdcdc;
+    var {
+      font-size: 19px;
+      padding-left: 16px;
+      .boxsizing;
+      color: #2b2b2b;
+      border-left: 3px solid #20bbfe;
+    }
+  }
+  .treeSearchCon {
+    position: relative;
+    padding: 16px 20px;
+    .boxsizing;
+    >div {
+      input {
+        width: 182px;
+        height: 38px;
+        border-radius: 4px;
+      }
+    }
+    .determine {
+      width: 64px;
+    }
+  }
+}
+.treeSearch.show {
+  right: 0;
+}
+.treecon >div >div{
+  display: none;
+}
+.treecon >div.show >div{
+  display: block;
+}
+.inputValue2 {
+  display: none;
+}
+.treecon {
+  .treeOne {
+    border-bottom: 1px solid #dcdcdc;
+  }
+  >div {
+    min-height: 60px;
+    padding-top: 20px;
+    >span {
+      font-size: 18px;
+      color: #333;
+      cursor: pointer;
+    }
+    >div {
+      overflow: auto;
+      max-height: 240px;
+    }
+  }
+}
+.showOrNotButton {
+  position: absolute;
+  top: 26%;
+  left: -26px;
+  width: 26px;
+  height: 120px;
+  background: url(../img/hideTree.png) center center no-repeat;
+  cursor: pointer;
+}
+.showOrNotButton.show {
+  background: url(../img/showTree.png) center center no-repeat;
+}
+
+// 分页
+.pager {
+    padding-left: 0;
+    margin: 20px 0;
+    text-align: center;
+    list-style: none;
+    li {
+        display: inline;
+        >a,>span {
+            display: inline-block;
+            padding: 5px 14px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+    }
+}
+.pager li > a {
+    color: #1e7fff;
+}
+.pager li > a:hover,
+.pager li > a:focus {
+    text-decoration: none;
+    background-color: #eee;
+}
+.pager .next > a,
+.pager .next > span {
+    float: right;
+}
+.pager .previous > a,
+.pager .previous > span {
+    float: left;
+}
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {
+    color: #777;
+    cursor: not-allowed;
+    background-color: #fff;
+}
+#pageID {
+    width: 50px; 
+    height: 25px;
+    margin-left:14px; 
+    font-size: 15px; 
+    border: 1px solid #a0a0a0; 
+    text-align: center;
+}

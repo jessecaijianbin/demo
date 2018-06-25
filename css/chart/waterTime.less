@@ -1,0 +1,25 @@
+@import "waterAnalysis.less";
+
+.form-line-wrap {
+  .date-wrap:not(:first-child) {
+    display: none;
+  }
+}
+.screen {
+  h2 {
+    .legend-wrap {
+      li{
+        &:first-child .tl {
+          background: #20bbfe;
+        }
+        &:nth-child(2) .tl {
+          background: #f29c15;
+        }
+        &:nth-child(3) .tl {
+          height: 12px;
+          background: #f35352;
+        }
+      }
+    }
+  }
+}

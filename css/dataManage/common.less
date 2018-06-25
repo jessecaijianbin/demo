@@ -1,0 +1,171 @@
+
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+.search-btn {
+  min-width: 90px;
+  height: 38px;
+  line-height: 38px;
+  background-image: linear-gradient(-37deg,
+  #1f94f3 0%,
+  #30b0fd 100%);
+  border-radius: 4px;
+  color: #fff;
+  border: 0;
+}
+.export-btn {
+  .search-btn;
+  min-width: 99px;
+  height: 34px;
+  line-height: 34px;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.tar {
+  text-align: right;
+}
+.tac {
+  text-align: center;
+}
+.lh1 {
+  line-height: 1;
+}
+.fs14 {
+  font-size: 14px;
+}
+.text-f7 {
+  color: #f73e3e!important;
+}
+.text-gray {
+  color: #999;
+}
+.text-disable {
+  color: rgba(102,102,102,0.58);
+}
+h2 {
+  font-size: 100%!important;
+}
+.ablue {
+  font-size: 16px;
+  color: #2eadfc;
+}
+.screen {
+  &.ctx-wrap {
+    margin-top: 20px;
+    h2 {
+      height: 50px;
+      line-height: 50px;
+      .export-btn {
+        margin-top: 8px;
+      }
+    }
+  }
+}
+// 查询区域样式
+.screenCon {
+  font-size: 16px;
+  .form-group {
+    margin-right: 34px;
+    &:last-child {
+      margin-right: 0;
+    }
+    .bootstrap-select {
+      width: 200px!important;
+      margin-right: 24px;
+      &:last-child {
+        margin-right: 0;
+      }
+      .btn {
+        font-size: 16px;
+      }
+    }
+    .min-select {
+      width: 145px!important;
+    }
+    .dropdown-toggle {
+      height: 40px;
+    }
+    .date-input {
+      .dropdown-toggle;
+      line-height: 40px;
+      width: 230px;
+    }
+  }
+}
+// 表格样式
+.table-wrap {
+  margin-bottom: 0!important;
+  & > tbody + tbody {
+    border-top: 0!important;
+  }
+  thead {
+    th {
+      border-bottom: 0!important;
+      background-color: rgba(233,248,255,0.6);
+      color: #333;
+    }
+  }
+  tbody {
+    tr {
+      td {
+        color: #666;
+      }
+      .bgcolor {
+        background-color: rgba(242,251,255,0.4);
+      }
+      &:nth-child(2n) {
+        .bgcolor;
+      }
+      &:hover {
+        .bgcolor;
+      }
+    }
+  }
+  th, td {
+    font-size: 14px;
+    padding: 10px 8px!important;
+  }
+}
+.legend-wrap {
+  li {
+    margin-left: 20px;
+    font-size: 14px;
+    .tl {
+      margin-right: 10px;
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      vertical-align: middle;
+    }
+  }
+}
+// 复选框
+input[type='checkbox'] {
+  display: none;
+}
+label[name="cblab"] {
+  cursor: pointer;
+  padding-left: 30px;
+  background: url("../../img/cbvisible.png") no-repeat left center;
+}
+input[type='checkbox']:checked + label[name="cblab"] {
+  background: url("../../img/cbcheck.png") no-repeat left center;
+}
+
+//radio单选框
+input[type='radio'] {
+  display: none;
+}
+label[name='radio'] {
+  padding-left: 30px;
+  background: url("../../img/radioVisible.png") no-repeat left center;
+}
+input[type='radio']:checked + label[name='radio'] {
+  background: url("../../img/radioChecked.png") no-repeat left center;
+}

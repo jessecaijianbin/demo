@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>站点信息管理</title>
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+    <link rel="stylesheet" type="text/less" href="../../css/common.less" />
+    <link rel="stylesheet" type="text/css" href="../../css/ui-dialog.css" />
+    <link rel="stylesheet" type="text/css" href="../../js/time/skin/WdatePicker.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-select.css" />
+    <link rel="stylesheet" href="../../css/zTreeStyle.css">
+    <!--页面特有css-->
+    <link rel="stylesheet" type="text/less" href="../../css/site/siteInfoManage.less" />
+    <script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../../js/less.js"></script>
+    <script type="text/javascript" src="/WQMS/js/common.js"></script>
+    <script type="text/javascript" src="../../js/dialog.js"></script>
+    <script src="../../js/time/WdatePicker.js"></script>
+    <script src="../../js/jquery.ui.widget.js"></script>
+    <script src="../../js/jquery.fileupload.js"></script>
+    <script src="../../js/arttemplate.js"></script>
+    <script src="/WQMS/js/bootstrap.js"></script>
+    <script src="/WQMS/js/bootstrap-select.js"></script>
+    <script src="../../js/jquery.ztree.all-3.5.js"></script>
+    <script src="../../js/jquery.ztree.exhide.js"></script>
+    <script src="../../js/jquery.validate.min.js"></script>
+    <script src="../../js/messages_zh.js"></script>
+    <!--页面特有js-->
+    <script src="../../js/site/siteInfoManage.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <div class="headTitle clearfix"></div>
+    <div class="wrap-con">
+        <div class="nav">
+
+        </div>
+        <div class="wrapCon">
+            <div class="nowAddr clearfix">
+                <span>当前位置：</span>
+                <p><a href="#" class="contentName">白马河站</a>&nbsp;/&nbsp;<var class="navName">站点信息管理</var></p>
+            </div>
+            <div class="infoManage">
+                <div class="infoManageSelect">
+                    <h2><var>筛选</var></h2>
+                    <div class="infoManageSelectCon clearfix">
+                        <div>
+                            <label>区域：</label>
+                            <p>
+                                <select name="" id=""class="selectpicker show-tick form-control" data-hide-disabled="true" data-live-search="true">
+                                    <option value="">全部</option>
+                                    <option value="">福州内河</option>
+                                </select>
+                            </p>
+                        </div>
+                        <div>
+                            <label for="">监控类型：</label>
+                            <p>
+                                <select name="" id="" class="selectpicker show-tick form-control" data-hide-disabled="true" data-live-search="true">
+                                    <option value="">国控</option>
+                                    <option value="">省控</option>
+                                    <option value="">市控</option>
+                                    <option value="">县控</option>
+                                    <option value="">企业群</option>
+                                    <option value="">其它</option>
+                                </select>
+                            </p>
+                        </div>
+                        <div>
+                            <label for="siteSearch">站点搜索：</label>
+                            <input type="text" id="siteSearch" placeholder="请输入站点名称">
+                        </div>
+                        <a href="#" class="determine">搜索</a>
+                    </div>
+                </div>
+                <div class="siteInfo">
+                    <h2 class="clearfix">
+                        <var>站点信息</var>
+                        <a href="#" class="siteInfo-add">新增站点</a>
+                    </h2>
+                    <div class="siteInfoCon">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <input type="checkbox" id="siteInfoAll" name="checkboxSelect">
+                                        <label for="siteInfoAll" name="checkboxSelect"></label>
+                                    </th>
+                                    <th>所属区域</th>
+                                    <th>站点名称</th>
+                                    <th>监控类型</th>
+                                    <th>负责人</th>
+                                    <th>联系方式</th>
+                                    <th>设备管理</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="siteInfoOther-1" name="checkboxSelect">
+                                        <label for="siteInfoOther-1" name="checkboxSelect"></label>
+                                    </td>
+                                    <td>福州市</td>
+                                    <td class="siteName">白马河站</td>
+                                    <td>市控</td>
+                                    <td>运维007</td>
+                                    <td>12312312312</td>
+                                    <td>
+                                        <a href="">设备管理</a>
+                                    </td>
+                                    <td>
+                                        <span class="siteInfo-detail">详情</span>
+                                        <span class="siteInfo-delete">删除</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="siteInfoOther-2" name="checkboxSelect">
+                                        <label for="siteInfoOther-2" name="checkboxSelect"></label>
+                                    </td>
+                                    <td>福州市</td>
+                                    <td class="siteName">白马河站</td>
+                                    <td>市控</td>
+                                    <td>运维007</td>
+                                    <td>12312312312</td>
+                                    <td>
+                                        <a href="">设备管理</a>
+                                    </td>
+                                    <td>
+                                        <span class="siteInfo-detail">详情</span>
+                                        <span class="siteInfo-delete">删除</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <span class="deleteBatch">批量删除</span>
+                        </div>
+                        <ul class="pager">
+                            <li><a href="#">首页</a></li>
+                            <li><a href="#">上一页</a></li>
+                            <li>1/12</li>
+                            <li>&nbsp;&nbsp;共12项</li>
+                            <li><a href="#">下一页</a></li>
+                            <li><a href="#">末页</a></li>
+                            <li>
+                                <input id="pageID" name="pageID" type="text" value="">
+                                <a href="#" style="padding:3px 7px;">跳转</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="treeSearchContain">
+    <div class="treeSearch">
+        <h3><var>搜索</var></h3>
+        <div class="treeSearchCon">
+            <div class="inputValue">
+                <input type="text" id="key" placeholder="请输入关键字"/>
+                <button onclick="callNumber()" class="determine">确定</button>
+            </div>
+            <div class="inputValue2">
+                <input type="text" id="key2" placeholder="请输入关键字"/>
+                <button onclick="callNumber2()" class="determine">确定</button>
+            </div>
+            <div class="treecon">
+                <div class="treeOne show">
+                    <span>行政树</span>
+                    <div id="organIds" class="ztree ztree_matrix"></div>
+                </div>
+                <div class="treeTwo">
+                    <span>流域树</span>
+                    <div id="organIds2" class="ztree ztree_matrix"></div>
+                </div>
+            </div>
+            <div class="showOrNotButton" onclick="showOrNot()"></div>
+        </div>
+    </div>
+</div>
+<!--新增站点-->
+<script type="text/html" id="addNew">
+    <form action="" class="form">
+        <div class="addSite">
+            <h3>基本内容</h3>
+            <ul>
+                <li>
+                    <div>
+                        <label for="addsiteName">基站名称：</label>
+                        <input type="text" id="addsiteName" required/>
+                        <span>*</span>
+                    </div>
+                    <div>
+                        <label for="">所属区域：</label>
+                        <p>
+                            <select name="" id="addaddrBelong" class="selectpicker show-tick form-control" data-hide-disabled="true" data-live-search="true">
+                                <option value="">全部</option>
+                                <option value="">福州市</option>
+                            </select>
+                        </p>
+                        <span>*</span>
+                    </div>
+                    <div>
+                        <label for="">所属流域</label>
+                        <p>
+                            <select name="" id="addbasinBelong" class="selectpicker show-tick form-control" data-hide-disabled="true" data-live-search="true">
+                                <option value="">全部</option>
+                                <option value="">福州市</option>
+                            </select>
+                        </p>
+                        <span>*</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="">监管类型：</label>
+                        <p>
+                            <select name="" id="" class="selectpicker show-tick form-control" data-hide-disabled="true" data-live-search="true">
+                                <option value="">国控</option>
+                                <option value="">省控</option>
+                                <option value="">市控</option>
+                                <option value="">县控</option>
+                                <option value="">企业群</option>
+                                <option value="">其它</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div>
+                        <label for="addcheckUnit">监管单位：</label>
+                        <p>
+                            <select name="" id="addcheckUnit" class="selectpicker show-tick form-control" data-hide-disabled="true" data-live-search="true">
+                                <option value="">全部</option>
+                                <option value="">福州市</option>
+                            </select>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="addbuildUnit">建设单位：</label>
+                        <input type="text" id="addbuildUnit">
+                    </div>
+                    <div>
+                        <label for="addbuildDate">建设日期：</label>
+                        <input readonly="readonly" type="text" class="Wdate" id="addbuildDate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})"/>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="addpersonInCharge">负责人：</label>
+                        <input type="text" id="addpersonInCharge">
+                    </div>
+                    <div>
+                        <label for="addphone">联系方式：</label>
+                        <input type="text" id="addphone">
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="addlongitude">经度：</label>
+                        <input type="text" id="addlongitude" required>
+                        <span>*</span>
+                    </div>
+                    <div>
+                        <label for="addlatitude">纬度：</label>
+                        <input type="text" id="addlatitude" required>
+                        <span>*</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="addsiteAddress">地址：</label>
+                        <input type="text" id="addsiteAddress">
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="" style="line-height: 80px;">现场照片：</label>
+                        <input type="file" id="addphoto">
+                        <label for="addphoto"></label>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="">执行标准：</label>
+                        <select name="" id="addexcecuteStandard">
+                            <option value="">地表水环境质量一类标准</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--该input不能删除也不用于按钮提交，用于方便validate判断-->
+        <input class="submit" type="submit" value="Submit" style="display: none;">
+    </form>
+</script>
+<!--站点详情-->
+<script type="text/html" id="siteDetail">
+    <form action="" class="form">
+        <div class="siteDetail">
+            <h3>基本内容</h3>
+            <ul>
+                <li>
+                    <div>
+                        <label for="siteName">基站名称：</label>
+                        <input type="text" id="siteName" required/>
+                        <span>*</span>
+                    </div>
+                    <div>
+                        <label for="">所属区域：</label>
+                        <p>
+                            <select name="" id="addrBelong" class="selectpicker show-tick form-control" data-hide-disabled="true" data-live-search="true">
+                                <option value="">全部</option>
+                                <option value="">福州市</option>
+                            </select>
+                        </p>
+                        <span>*</span>
+                    </div>
+                    <div>
+                        <label for="">所属流域</label>
+                        <p>
+                            <select name="" id="basinBelong" class="selectpicker show-tick form-control" data-hide-disabled="true" data-live-search="true">
+                                <option value="">全部</option>
+                                <option value="">福州市</option>
+                            </select>
+                        </p>
+                        <span>*</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="">监管类型：</label>
+                        <select name="" id="">
+                            <option value="">国控</option>
+                            <option value="">省控</option>
+                            <option value="">市控</option>
+                            <option value="">县控</option>
+                            <option value="">企业群</option>
+                            <option value="">其它</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="checkUnit">监管单位：</label>
+                        <p>
+                            <select name="" id="checkUnit" class="selectpicker show-tick form-control" data-hide-disabled="true" data-live-search="true">
+                                <option value="">全部</option>
+                                <option value="">福州市</option>
+                            </select>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="buildUnit">建设单位：</label>
+                        <input type="text" id="buildUnit">
+                    </div>
+                    <div>
+                        <label for="buildDate">建设日期：</label>
+                        <input readonly="readonly" type="text" class="Wdate" id="buildDate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})"/>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="personInCharge">负责人：</label>
+                        <input type="text" id="personInCharge">
+                    </div>
+                    <div>
+                        <label for="phone">联系方式：</label>
+                        <input type="text" id="phone">
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="longitude">经度：</label>
+                        <input type="text" id="longitude" required>
+                        <span>*</span>
+                    </div>
+                    <div>
+                        <label for="latitude">纬度：</label>
+                        <input type="text" id="latitude" required>
+                        <span>*</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="siteAddress">地址：</label>
+                        <input type="text" id="siteAddress">
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="" style="line-height: 80px;">现场照片：</label>
+                        <input type="file" id="photo">
+                        <label for="photo"></label>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="">执行标准：</label>
+                        <select name="" id="excecuteStandard">
+                            <option value="">地表水环境质量一类标准</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--该input不能删除也不用于按钮提交，用于方便validate判断-->
+        <input class="submit" type="submit" value="Submit" style="display: none;">
+    </form>
+</script>
+</body>
+</html>

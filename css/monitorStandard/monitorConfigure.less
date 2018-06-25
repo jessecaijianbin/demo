@@ -1,0 +1,112 @@
+.boxsizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.monitorCon,
+.monitorSelectCon,
+.monitorSdCon {
+  padding: 20px;
+  .boxsizing;
+}
+.monitorSelectCon {
+  label {
+    line-height: 40px;
+  }
+  input {
+    width: 188px;
+    height: 38px;
+    border-radius: 4px;
+    margin-right: 20px;
+  }
+}
+.linkSite {
+  color: #2eadfc;
+}
+.linkSiteList {
+  .linkSiteSearch {
+    margin-bottom: 20px;
+    label {
+      float: left;
+      line-height: 40px;
+    }
+    p {
+      float: left;
+      width: 178px;
+      margin-right: 20px;
+    }
+  }
+  .linkSiteListCon {
+    td {
+      line-height: 31px !important;
+    }
+  }
+}
+.editStandard,
+.addStd {
+  h3 {
+    margin-bottom: 12px;
+    font-size: 18px;
+    color: #333;
+    var {
+      line-height: 46px;
+    }
+    a {
+      float: right;
+    }
+  }
+  >div {
+    margin-bottom: 20px;
+    label {
+      float: left;
+      line-height: 40px;
+    }
+    input {
+      float: left;
+      width: 178px;
+      height: 40px;
+      border-radius: 4px;
+    }
+    label[for=standardIntroduce]{
+      line-height: 98px;
+    }
+    textarea {
+      flaot: left;
+      width: 560px;
+      height: 98px;
+      padding: 10px;
+      .boxsizing;
+      resize: none;
+      border-radius: 4px;
+    }
+  }
+  td {
+    line-height: 31px !important;
+    label {
+      margin-top: 7px !important;
+    }
+    input {
+      width: 40px;
+      border: 0;
+      border-bottom: 1px solid #dcdcdc;
+      background: transparent;
+    }
+  }
+}
+.twoType {
+  span {
+    display: none;
+    width: 24px;
+    height: 17px;
+    background: url(../../img/del.png) center center no-repeat;
+    cursor: pointer;
+  }
+}
+.editStandard tr .twoType:last-child,
+.addStd tr .twoType:last-child {
+  span {
+    display: inline-block;
+  }
+}

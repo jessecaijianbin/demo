@@ -1,0 +1,225 @@
+.boxsizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@tabColor: #2eadfc;
+.dataAndLongRange {
+  @dataSpanHeight: 40px;
+  height: @dataSpanHeight;
+  line-height: @dataSpanHeight;
+  padding: 0 20px;
+  .boxsizing;
+  background: white;
+  span {
+    float: left;
+    width: 76px;
+    height: 38px;
+    margin-right: 60px;
+    color: #333;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+    font-size: 18px;
+    cursor: pointer;
+    cursor: hand;
+  }
+  span.selected {
+    color: @tabColor;
+    border-bottom: 2px solid @tabColor;
+  }
+}
+.dataAndLongRangeCon {
+  >div {
+    display: none;
+  }
+  >div.selected {
+    display: block;
+  }
+}
+@selectHeight: 40px;
+.screenCon {
+  padding: 20px 28px;
+  .boxsizing;
+  ul {
+    li {
+      margin-bottom: 20px;
+      div {
+        float: left;
+        margin-right: 26px;
+        label[name=checkOne] {
+          float: left;
+          width: 130px;
+        }
+        label {
+          line-height: @selectHeight;
+          color: #555;
+        }
+        select, input {
+          width: 230px;
+          height: @selectHeight;
+          border-radius: 4px;
+        }
+        label.noChecked,
+        select.noChecked,
+        .Wdate.noChecked {
+          color: #a5a5a5;
+        }
+      }
+    }
+  }
+}
+.selectType {
+  label {
+    float: left;
+    width: 118px;
+    line-height: @selectHeight;
+    color: #666;
+  }
+  ol {
+    float: left;
+    width: 860px;
+    li {
+      float: left;
+      width: 182px;
+      height: @selectHeight;
+      margin-right: 30px;
+      margin-bottom: 20px;
+      border: 1px solid #2eadfc;
+      line-height: @selectHeight;
+      color: white;
+      text-align: center;
+      border-radius: 4px;
+      background: #2eadfc;
+      cursor: pointer;
+    }
+  }
+  ol.noSelected {
+    li {
+      border: 1px solid #e8e8e8;
+      background: white;
+      color: #666;
+    }
+  }
+}
+.instrumentLogCon {
+  padding: 16px 0 32px 0;
+  .boxsizing;
+}
+.controlOrder {
+  padding: 20px;
+  .boxsizing;
+}
+.quelifyControl {
+  margin-bottom: 20px;
+  line-height: 40px;
+  >label {
+    float: left;
+    margin-right: 14px;
+    color: #555;
+  }
+  >select {
+    float: left;
+    width: 230px;
+    height: 40px;
+    margin-right: 26px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  >div {
+    float: left;
+    margin-right: 20px;
+    label {
+      float: left;
+      margin-right: 10px;
+      color: #666;
+    }
+  }
+  .controlOrderButton {
+    float: left;
+    span {
+      float: left;
+      width: 178px;
+      height: 40px;
+      background: #2eadfc;
+      border-radius: 6px;
+      text-align: center;
+      line-height: 40px;
+      color: white;
+      cursor: pointer;
+    }
+    var {
+      float: left;
+      width: 1px;
+      height: 40px;
+      margin: 0 30px;
+      background: url(../../img/blackline.png) center center no-repeat;
+    }
+  }
+  //接收不到远程指令的情况
+  .controlOrderButton.unableToReceive {
+    span {
+      background: #f6f6f6;
+      color: #666;
+    }
+  }
+}
+.volume {
+  float: left;
+  position: relative;
+  span {
+    overflow:hidden;
+    width:18px;
+    margin-left:100px;
+    select {
+      width:120px;
+      height:40px;
+      margin-left:-108px;
+      margin-right: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+  input {
+    width: 75px;
+    height: 36px;
+    margin-left: -140px;
+    color:#000;
+    border: 0;
+    border-radius: 4px;
+    outline: none;
+  }
+}
+.timeOrder {
+  label {
+    float: left;
+    margin-right: 14px;
+    color: #555;
+  }
+  div {
+    span {
+      float: left;
+      width: 178px;
+      height: 40px;
+      margin-right: 42px;
+      background: #2eadfc;
+      border-radius: 6px;
+      text-align: center;
+      line-height: 40px;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  //离线状态
+  div.offline {
+    span {
+      background: #f6f6f6;
+      color: #666;
+    }
+  }
+}
+.longRangeLogCon {
+  padding: 20px;
+  .boxsizing;
+}

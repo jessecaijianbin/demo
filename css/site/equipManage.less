@@ -1,0 +1,178 @@
+.boxsizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.equipInfoCon,
+.instrumentCon,
+.videoCon {
+  padding: 14px 0;
+  .boxsizing;
+}
+.addNew h3,
+.monitorData >div h3,
+.editmonitorData >div h3,
+.editEquip h3,
+.editInstrument h3,
+.editInstrumentPara h3,
+.addInstrument h3,
+.addInstrumentPara h3,
+.addVideo h3,
+.addVideoPara h3,
+.editVideo h3,
+.editVideoPara h3{
+  font-size: 18px;
+  color: #333;
+}
+//新增设备、编辑设备
+.addNew,
+.editEquip,
+.editInstrument,
+.addInstrument,
+.addVideo,
+.addVideoPara,
+.editVideo,
+.editVideoPara {
+  h3 {
+    margin-bottom: 16px;
+  }
+  .equip-info,
+  .editInstrument-info,
+  .addInstrument-info,
+  .addVideo-info,
+  .addVideoPara-info,
+  .editVideo-info,
+  .editVideoPara-info {
+    li {
+      margin-bottom: 20px;
+      >div {
+        float: left;
+        margin-right: 30px;
+        label {
+          float: left;
+          color: #666;
+          line-height: 40px;
+        }
+        input,
+        p {
+          float: left;
+          width: 178px;
+          height: 40px;
+          border-radius: 4px;
+        }
+      }
+      >div:nth-child(3){
+        margin-right: 0;
+      }
+    }
+  }
+}
+#videoBrand,
+#editvideoBrand {
+  //float: left;
+  width: 178px;
+  height: 40px;
+  border-radius: 4px;
+}
+.editVideo-info li >div >label {
+  width: 82px;
+}
+.monitorData,
+.editmonitorData,
+.editInstrumentPara,
+.addInstrumentPara {
+  >div {
+    margin-bottom: 14px;
+    h3 {
+      float: left;
+      line-height: 40px;
+    }
+    a {
+      float: right;
+    }
+  }
+}
+//添加参数、编辑参数
+.addPerameter,
+.editPerameter{
+  >div {
+    margin-bottom: 20px;
+    label {
+      float: left;
+      line-height: 40px;
+    }
+    input {
+      float: left;
+      width: 176px;
+      height: 40px;
+      margin-right: 20px;
+      border-radius: 4px;
+    }
+    a {
+      float: left;
+    }
+  }
+  table {
+    td {
+      line-height: 23px !important;
+      label {
+        margin-top: 5px !important;
+      }
+    }
+  }
+}
+.editmonitorData {
+  td {
+    line-height: 27px !important;
+    input {
+      width: 70px;
+      height: 26px;
+      text-align: center;
+      border: 0;
+      border-bottom: 1px solid #dcdcdc;
+    }
+  }
+}
+.instrumentCon {
+  td {
+    line-height: 25px !important;
+    label {
+      margin-top: 5px !important;
+    }
+    a {
+      color: #2eadfc;
+    }
+  }
+}
+.editInstrumentPara {
+  td {
+    line-height: 29px !important;
+  }
+}
+.addVideo-info li >div >label {
+  width: 80px;
+}
+.addVideoPara-info li >div:nth-child(1) >label,
+.editVideoPara-info li >div:nth-child(1) >label{
+ width: 84px;
+}
+.addVideoPara-info li >div >label,
+.editVideoPara-info li >div >label {
+  width: 114px;
+}
+.radioLi {
+  label {
+    float: left;
+    line-height: 40px;
+  }
+  >div {
+    label {
+      width: 90px !important;
+    }
+  }
+}
+.addVideoPara {
+  margin-top: 30px;
+}

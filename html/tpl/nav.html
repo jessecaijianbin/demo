@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<div class="navDiv">
+    <ul class="navUl">
+        <li class="ecological">
+            <a href="#">
+                <span></span>
+                <var>生态可视化</var>
+            </a>
+            <ol>
+                <li>
+                    <a href="../../html/ecological/ecological.html">生态可视化</a>
+                </li>
+            </ol>
+        </li> 
+        <li class="map">
+            <a href="#">
+                <span></span>
+                <var>地图与监控</var>
+            </a>
+            <ol>
+                <li>
+                    <a href="../../html/map/map.html">地图与监控</a>
+                </li>
+            </ol>
+        </li> 
+        <li class="site">
+            <a href="#">
+                <span></span>
+                <var>站点管理</var>
+            </a>
+            <ol>
+                <li>
+                    <a href="../../html/site/siteVisualization.html">站点可视化</a>
+                </li>
+                <li>
+                    <a href="../../html/site/videoSurveillance.html">视频监控</a>
+                </li>
+                <li>
+                    <a href="../../html/site/longRangeControl.html">远程控制</a>
+                </li>
+                <li>
+                    <a href="../../html/site/runset.html">运行设置</a>
+                </li>
+                <li>
+                    <a href="../../html/site/siteInfoManage.html">站点信息管理</a>
+                </li>
+                <li>
+                    <a href="../../html/site/equipManage.html">设备管理</a>
+                </li>
+            </ol>
+        </li>
+        <li class="dataManage">
+            <a href="#">
+                <span></span>
+                <var>数据管理</var>
+            </a>
+            <ol>
+                <li>
+                    <a href="../../html/dataManage/dataSearch.html">数据查询</a>
+                </li>
+                <li>
+                    <a href="../../html/dataManage/dataIntegrity.html">数据完整性统计</a>
+                </li>
+                <li>
+                    <a href="../../html/dataManage/dataValidity.html">数据有效性统计</a>
+                </li>
+                <li>
+                    <a href="../../html/dataManage/dataExpert.html">数据录入</a>
+                </li>
+                <li>
+                    <a href="../../html/dataManage/logQuery.html">日志查询</a>
+                </li>
+            </ol>
+        </li>
+        <li class="reportForm">
+            <a href="#">
+                <span></span>
+                <var>统计报表</var>
+            </a>
+            <ol>
+                <li>
+                    <a href="../../html/reportForm/monitorData.html">监测数据报表</a>
+                </li>
+                <li>
+                    <a href="../../html/reportForm/qualityControl.html">质控报表</a>
+                </li>
+                <li>
+                    <a href="../../html/reportForm/faultCondition.html">故障情况报表</a>
+                </li>
+                <li>
+                    <a href="../../html/reportForm/netCondition.html">联网情况报表</a>
+                </li>
+            </ol>
+        </li>
+        <li class="chart">
+            <a href="#">
+                <span></span>
+                <var>统计图表</var>
+            </a>
+            <ol>
+                <li>
+                    <a href="../../html/chart/waterAnalysis.html">水质分析图表</a>
+                </li>
+                <li>
+                    <a href="../../html/chart/waterChangeTrend.html">水质变化趋势对比图</a>
+                </li>
+                <li>
+                    <a href="../../html/chart/minMaxCompare.html">最大最小值对比分析图</a>
+                </li>
+                <li>
+                    <a href="../../html/chart/waterTime.html">水质时间比例分析图</a>
+                </li>
+                <li>
+                    <a href="../../html/chart/waterPollution.html">水质污染指数分析图</a>
+                </li>
+                <li>
+                    <a href="../../html/chart/overStandardData.html">超标数据图</a>
+                </li>
+                <li>
+                    <a href="../../html/chart/dataCompare.html">数据同比环比分析</a>
+                </li>
+            </ol>
+        </li>
+        <li class="monitorStandard">
+            <a href="#">
+                <span></span>
+                <var>监测标准管理</var>
+            </a>
+            <ol>
+                <li>
+                    <a href="../../html/monitorStandard/monitorConfigure.html">监测标准配置</a>
+                </li>
+            </ol>
+        </li>
+        <li class="alarm">
+            <a href="#">
+                <span></span>
+                <var>告警管理</var>
+            </a>
+            <ol>
+                <li>
+                    <a href="../../html/alarm/realTimeAlarm.html">告警管理</a>
+                </li>
+            </ol>
+        </li>
+        <li class="systemSetup">
+            <a href="#">
+                <span></span>
+                <var>系统设置</var>
+            </a>
+            <ol>
+                <li>
+                    <a href="../../html/systemSetup/systemSetup.html">系统设置</a>
+                </li>
+            </ol>
+        </li>
+    </ul>
+</div>
+    <script>
+        var url = window.location + "";
+        var lastIndex = url.indexOf("/html");
+        var beginStr = url.substring(lastIndex);
+        $(".navUl li a").each(function(){
+            var aBeforeUrl = $(this).attr("href");
+            var aSelect = aBeforeUrl.indexOf("/html");
+            var aUrl = aBeforeUrl.substring(aSelect);
+            if(beginStr.indexOf(aUrl) != -1){
+                // console.log(beginStr);
+                // console.log(aUrl);
+                $(".navUl li").removeClass("active open");
+                $(".navUl ol").hide();
+                $(".navUl li a[href='../.."+aUrl+"']").parent("li").addClass("active").parent("ol").show().parent("li").addClass("active open");
+            }
+        })
+        $(".navUl >li").click(function(){
+            $(this).toggleClass("open");
+            if($(this).hasClass("open")){
+                $(this).find("ol").show(300).parent().siblings().removeClass("open").find("ol").hide(300);
+            }else{
+                $(this).find("ol").hide(300);
+            }
+        })
+    </script>
+</body>
+</html>

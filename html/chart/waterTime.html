@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>水质时间比例分析图</title>
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+    <link rel="stylesheet" type="text/less" href="../../css/common.less" />
+    <link rel="stylesheet" type="text/less" href="../../css/dataManage/common.less" />
+    <!--页面特有css-->
+    <link rel="stylesheet" type="text/less" href="../../css/chart/waterTime.less">
+    <link rel="stylesheet" type="text/css" href="../../js/time/skin/WdatePicker.css" />
+    <link rel="stylesheet" type="text/css" href="../../js/time/skin/default/datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="../../js/time/skin/whyGreen/datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-select.css" />
+    <script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../../js/less.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" src="../../js/time/WdatePicker.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap-select.js"></script>
+    <script type="text/javascript" src="../../js/echarts.js"></script>
+    <!-- 页面特有js -->
+    <script type="text/javascript" src="../../js/chart/waterTime.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <div class="headTitle clearfix"></div>
+    <div class="wrap-con">
+        <div class="nav">
+
+        </div>
+        <div class="wrapCon">
+            <div class="nowAddr clearfix">
+                <span>当前位置：</span>
+                <p><a href="#" class="contentName">白马河站</a>&nbsp;/&nbsp;<var class="navName">水质时间比例分析图</var></p>
+            </div>
+            <div class="dataAndLongRangeCon">
+                <div class="dataAcquisition selected">
+                    <div class="screen">
+                        <h2 class="clearfix">
+                            <var>筛选</var>
+                        </h2>
+                        <form class="form-inline screenCon">
+                            <div class="form-line-wrap">
+                                <div class="form-group">
+                                    <label for="">时间类型：</label>
+                                    <select id="dateType1" class="selectpicker">
+                                        <option value="0">月</option>
+                                        <option value="1">季</option>
+                                        <option value="2">年</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <span class="date-wrap date-wrap0">
+                                        <div class="form-group">
+                                            <label for="startDate">开始时间：</label>
+                                            <input id="startDate" class="form-control date-input Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="endDate">结束时间：</label>
+                                            <input id="endDate" class="form-control date-input Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                                        </div>
+                                    </span>
+                                    <span class="date-wrap date-wrap1">
+                                        <div class="form-group">
+                                            <label for="startDate1">开始时间：</label>
+                                            <input id="startDate1" class="form-control date-input Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy年MM季度',disabledDates:['....-0[5-9]-..','....-1[0-2]-..'],startDate:'%y-01-01'})"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="endDate1">结束时间：</label>
+                                            <input id="endDate1" class="form-control date-input Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy年MM季度',disabledDates:['....-0[5-9]-..','....-1[0-2]-..'],startDate:'%y-01-01'})"/>
+                                        </div>
+                                    </span>
+                                    <span class="date-wrap date-wrap2">
+                                        <div class="form-group">
+                                            <label for="startDate2">开始时间：</label>
+                                            <input id="startDate2" class="form-control date-input Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy年'})"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="endDate2">结束时间：</label>
+                                            <input id="endDate2" class="form-control date-input Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy年'})"/>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-line-wrap flw-cb-wrap">
+                                <div class="form-group">
+                                    <label for="" class="fl">站点选择：</label>
+                                    <div class="r-checkbox">
+                                        <span>
+                                            <input type="checkbox" id="site1"/>
+                                            <label for="site1" name="cblab">白马河站</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" id="site2"/>
+                                            <label for="site2" name="cblab">省点大站</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" id="site3"/>
+                                            <label for="site3" name="cblab">五四河站</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" id="site4"/>
+                                            <label for="site4" name="cblab">瀛州河站</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" id="site5"/>
+                                            <label for="site5" name="cblab">凤坂河站</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" id="site6"/>
+                                            <label for="site6" name="cblab">彬德闸排涝站</label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-line-wrap flw-cb-wrap">
+                                <div class="form-group">
+                                    <label for="paramsChoose">参数选择：</label>
+                                    <select id="paramsChoose" class="selectpicker">
+                                        <option value="1">流速</option>
+                                        <option value="2">水温</option>
+                                        <option value="3">氨氮</option>
+                                        <option value="4">溶解氧</option>
+                                        <option value="5">水位</option>
+                                        <option value="6">总磷</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="tar search-btn-wrap">
+                                <button type="button" class="search-btn">查询</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="screen ctx-wrap">
+                        <h2 class="clearfix">
+                            <var>水质时间比例分析图</var>
+                            <ul class="fr clearfix legend-wrap">
+                                <li class="fl">
+                                    <span class="tl"></span>
+                                    <span>Ⅰ～Ⅲ类水</span>
+                                </li>
+                                <li class="fl">
+                                    <span class="tl"></span>
+                                    <span>Ⅳ～Ⅴ类水</span>
+                                </li>
+                                <li class="fl">
+                                    <span class="tl"></span>
+                                    <span>劣Ⅴ类水</span>
+                                </li>
+                            </ul>
+                        </h2>
+                        <div class="screenCon">
+                            <div id="chart1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
