@@ -6,31 +6,12 @@
 */
 
 $(function(){
-    $(".headTitle").load("../tpl/header.html");
-    $(".nav").load("../tpl/nav.html");
-    // $.ajax({
-    //     url: "/WQMS/html/tpl/header.html",
-    //     type:"GET",
-    //     async:false,
-    //     dataType:'text', //"jsonp"
-    //     success:function(res){
-    //         console.log(res);
-    //         $(".headTitle").html(res);
-    //     }
-    // })
-    // $.ajax({
-    //     url: "/WQMS/html/tpl/nav.html",
-    //     type:"GET",
-    //     async:false,
-    //     dataType:'text', //"jsonp"
-    //     success:function(res){
-    //         console.log(res);
-    //         $(".nav").html(res);
-    //     }
-    // })
+    /*$(".headTitle").load("../tpl/header.html");
+    $(".nav").load("../tpl/nav.html");*/
 });
 // 全选
 function selectAll(all,childInput,childrenInputLength,inputCheckedLength){
+    alert("我被调用了");
     $(all).change(function(){
         var isCheck=$(all).is(':checked');
         $(childInput).each(function() {
