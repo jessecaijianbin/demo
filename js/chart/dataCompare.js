@@ -1,9 +1,11 @@
 $(function () {
+    var aa = $(".screenCon").width();
+    console.log(aa);
     $(".dataAndLongRange span").click(function(){
         $(this).addClass("selected").siblings("span").removeClass("selected").parent().siblings(".dataAndLongRangeCon").children("div").eq($(this).index()).addClass("selected").siblings().removeClass("selected");
         _initChart($(this).index())
     })
-    _initChart(0)
+    _initChart(0);
 })
 
 var option = {

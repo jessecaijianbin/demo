@@ -18,11 +18,11 @@ $(function(){
     $(".equipInfo-add").click(function(){
         var html = template("addNew");
         dialog({
-            title: "新增监测设备管理",
+            title: "新增监测设备",
             content: html,
             cancel: true,
             cancelValue: "返回",
-            okValue: "保存",
+            okValue: "确定",
             ok: function(){
                 $("input[type=submit]").click();
                 var cb = $(".form").validate().form();
@@ -40,7 +40,7 @@ $(function(){
     $(".equipInfo-detail").click(function(){
         var html = template("editEquip");
         dialog({
-            title: "编辑监测设备管理",
+            title: "编辑监测设备",
             content: html,
             cancel: true,
             cancelValue: "返回",
@@ -118,7 +118,7 @@ $(function(){
             content: html,
             cancel: true,
             cancelValue: "返回",
-            okValue: "保存",
+            okValue: "确定",
             ok: function(){
                 $("input[type=submit]").click();
                 var cb = $(".form").validate().form();
@@ -170,7 +170,7 @@ $(function(){
             content: html,
             cancel: true,
             cancelValue: "返回",
-            okValue: "保存",
+            okValue: "确定",
             ok: function(){
                 $("input[type=submit]").click();
                 var cb = $(".form").validate().form();
@@ -247,13 +247,14 @@ function addNewPerameter(){
         cancelValue: "返回",
         okValue: "保存",
         ok: function(){
+            var index = parseInt($(".monitorData tbody tr:last-child td:nth-child(1)").html()) + 1;
             // 测试添加到“新增监测设备”
-            var tr = "<tr><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td></tr>";
+            var tr = "<tr><td>"+index+"</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td></tr>";
             $(".monitorData table tbody").append(tr);
         }
     }).showModal();
 }
-// 监测设备管理-编辑设-备添加参数
+// 监测设备管理-编辑设备-添加参数
 function editPerameter(){
     var html = template("editPerameter");
     dialog({
@@ -263,8 +264,9 @@ function editPerameter(){
         cancelValue: "返回",
         okValue: "保存",
         ok: function(){
+            var index = parseInt($(".editmonitorData tbody tr:last-child td:nth-child(1)").html()) + 1;
             // 测试添加到“新增监测设备”
-            var tr = "<tr><td>测试编辑</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td></tr>";
+            var tr = "<tr><td>"+index+"</td><td>测试编辑</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td></tr>";
             $(".editmonitorData table tbody").append(tr);
         }
     }).showModal();

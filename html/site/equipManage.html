@@ -56,7 +56,7 @@
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th></th>
+                                        <th>编号</th>
                                         <th>
                                             <input type="checkbox" id="equipAll" name="checkboxSelect">
                                             <label for="equipAll" name="checkboxSelect"></label>
@@ -71,6 +71,7 @@
                                 <tbody>
                                     <for>
                                         <tr>
+                                            <td>1</td>
                                             <td>
                                                 <input type="checkbox" id="equipOther-1" name="checkboxSelect">
                                                 <label for="equipOther-1" name="checkboxSelect"></label>
@@ -116,7 +117,7 @@
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
-                                    <th></th>
+                                    <th>编号</th>
                                     <th>
                                         <input type="checkbox" id="instrumentAll" name="checkboxSelect">
                                         <label for="instrumentAll" name="checkboxSelect"></label>
@@ -367,26 +368,28 @@
             </div>
             <table class="table table-striped">
                 <thead>
-                <tr>
-                    <th>参数名称</th>
-                    <th>参数编码</th>
-                    <th>参数单位</th>
-                    <th>参数精度</th>
-                    <th>量程下限</th>
-                    <th>量程上限</th>
-                    <th>检测周期（分钟）</th>
-                </tr>
+                    <tr>
+                        <th>编号</th>
+                        <th>参数名称</th>
+                        <th>参数编码</th>
+                        <th>参数单位</th>
+                        <th>参数精度</th>
+                        <th>量程下限</th>
+                        <th>量程上限</th>
+                        <th>检测周期（分钟）</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -398,14 +401,14 @@
 <script type="text/html" id="addPerameter" onload="">
     <div class="addPerameter">
         <div class="clearfix">
-            <label for="keyword">关键词：</label>
-            <input type="text" id="keyword">
+            <label for="keywords">关键词：</label>
+            <input type="text" id="keywords">
             <a href="#" class="searchParameter"  onclick="itemQuery()">查询</a>
         </div>
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th></th>
+                    <th>编号</th>
                     <th>
                         <input type="checkbox" id="addPeraAll" name="checkboxSelect">
                         <label for="addPeraAll" name="checkboxSelect"></label>
@@ -490,37 +493,39 @@
         </div>
         <div class="editmonitorData">
             <div class="clearfix">
-                <h3>监测数据</h3>
-                <a href="#" class="monitor-add-perameter" onclick="editPerameter()">新增参数</a>
+                <h3>监测参数</h3>
+                <a href="#" class="monitor-add-perameter" onclick="editPerameter()">参数变更</a>
             </div>
             <table class="table table-striped">
                 <thead>
-                <tr>
-                    <th>参数名称</th>
-                    <th>参数编码</th>
-                    <th>参数单位</th>
-                    <th>参数精度</th>
-                    <th>量程下限</th>
-                    <th>量程上限</th>
-                    <th>检测周期（分钟）</th>
-                </tr>
+                    <tr>
+                        <th>编号</th>
+                        <th>参数名称</th>
+                        <th>参数编码</th>
+                        <th>参数单位</th>
+                        <th>参数精度</th>
+                        <th>量程下限</th>
+                        <th>量程上限</th>
+                        <th>检测周期（分钟）</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>总氮</td>
-                    <td>TP001</td>
-                    <td>mg/L</td>
-                    <td>0.01</td>
-                    <td>
-                        <input type="text" value="2">
-                    </td>
-                    <td>
-                        <input type="text" value="2">
-                    </td>
-                    <td>
-                        <input type="text" value="120">
-                    </td>
-                </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>总氮</td>
+                        <td>TP001</td>
+                        <td>mg/L</td>
+                        <td>0.01</td>
+                        <td>
+                            <input type="text" value="2">
+                        </td>
+                        <td>
+                            <input type="text" value="2">
+                        </td>
+                        <td>
+                            <input type="text" value="120">
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -539,7 +544,7 @@
         <table class="table table-striped">
             <thead>
             <tr>
-                <th></th>
+                <th>编号</th>
                 <th>
                     <input type="checkbox" id="editPeraAll" name="checkboxSelect">
                     <label for="editPeraAll" name="checkboxSelect"></label>
@@ -624,7 +629,7 @@
         </div>
         <div class="editInstrumentPara">
             <div class="clearfix">
-                <h3>监测数据</h3>
+                <h3>关联监测设备</h3>
             </div>
             <table class="table table-striped">
                 <thead>
@@ -632,7 +637,7 @@
                     <th>编号</th>
                     <th>选择</th>
                     <th>设备名称</th>
-                    <th>关联参数编号</th>
+                    <th>关联参数</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -710,7 +715,7 @@
         </div>
         <div class="addInstrumentPara">
             <div class="clearfix">
-                <h3>监测数据</h3>
+                <h3>关联监测设备</h3>
             </div>
             <table class="table table-striped">
                 <thead>
@@ -718,7 +723,7 @@
                     <th>编号</th>
                     <th>选择</th>
                     <th>设备名称</th>
-                    <th>关联参数编号</th>
+                    <th>关联参数</th>
                 </tr>
                 </thead>
                 <tbody>

@@ -7,14 +7,16 @@ $(function(){
     selectAll("#messageAll",".messageAlarmListCon td input[type='checkbox']",".messageAlarmListCon tbody tr",".messageAlarmListCon td input:checked");
 
     $(".selectpicker").selectpicker({});
-
+    // 告警类型和超标程度显示关系
+    alarmRelation("#alarmType",".outStandardLevel");
+    alarmRelation("#historyAlarmType",".alarmLevel");
     // 编辑通知规则
     $(".message-detail").click(function(){
         var html = template("editRule");
         dialog({
             title: "编辑通知规则",
             content: html,
-            okValue: "确定",
+            okValue: "保存",
             cancelValue: "返回",
             cancel: true,
             ok: function(){
@@ -36,8 +38,59 @@ $(function(){
             }
         }).showModal();
     })
+    // 告警删除
+    $(".message-delete").click(function(){
+        dialog({
+            title: "删除提示",
+            content: "确定删除告警吗？",
+            okValue: "确定",
+            cancelValue: "返回",
+            cancel: true,
+            ok: true
+        }).showModal();
+    })
+    // 批量删除
+    $(".message-deleteBatch").click(function(){
+        var checkedArr = [];
+        $(".tbodyCon tr").each(function(){
+            if($(this).find("input").is(":checked")){
+                checkedArr.push($(this).attr("id"));
+            }
+        })
+        if(checkedArr.length <= 0){
+            dialog({
+                title: "提示",
+                content: "请选择要删除的告警",
+                okValue: "确定",
+                ok: true,
+                cancelValue: "取消",
+                cancel: true,
+            }).showModal();
+        }else{
+            dialog({
+                title: "删除提示",
+                content: "确定要删除这些告警的数据吗？",
+                cancelValue: "取消",
+                cancel: true,
+                okValue: "确定",
+                ok: function(){
 
+                }
+            }).showModal();
+            deleteCss(); //删除的样式
+        }
+    })
 })
+function alarmRelation(select,next){
+    $(select).change(function(){
+        var html = $(this).find("option:checked").html();
+        if(html == "所有类型" || html == "超标告警"){
+            $(next).show();
+        }else{
+            $(next).hide();
+        }
+    })
+}
 // 编辑-添加人员
 function addPeople(){
     var liLength = $(".peopleList ol li").length;

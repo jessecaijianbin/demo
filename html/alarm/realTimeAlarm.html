@@ -38,13 +38,13 @@
                 <p><a href="#" class="contentName">白马河站</a>&nbsp;/&nbsp;<var class="navName">实时告警信息查看</var></p>
             </div>
             <div class="alarmTab">
-                <span>实时告警</span>
+                <span class="selected">实时告警</span>
                 <span>历史告警</span>
-                <span class="selected">告警通知配置</span>
+                <span>告警通知配置</span>
             </div>
             <div class="alarmCon">
                 <!--实时告警-->
-                <div class="realAlarm">
+                <div class="realAlarm selected">
                     <div class="realAlarmSelect">
                         <h2><var>筛选</var></h2>
                         <div class="realAlarmSelectCon">
@@ -70,12 +70,12 @@
                                         </select>
                                     </p>
                                 </div>
-                                <div>
-                                    <label for="outStandardLevel">超标级别：</label>
+                                <div class="outStandardLevel">
+                                    <label for="outStandardLevel">超标程度：</label>
                                     <p>
                                         <select name="" id="outStandardLevel" class="selectpicker show-tick form-control" data-hide-disabled="true" data-live-search="true">
                                             <optgroup>
-                                                <option value="">所有级别</option>
+                                                <option value="">所有类型</option>
                                             </optgroup>
                                             <optgroup>
                                                 <option value="">一般超标</option>
@@ -127,7 +127,7 @@
                                 <thead>
                                 <tr>
                                     <th></th>
-                                    <th>告警类型</th>
+                                    <th>超标程度</th>
                                     <th>告警描述</th>
                                     <th>告警时间</th>
                                     <th>历时</th>
@@ -214,7 +214,7 @@
                                 <div>
                                     <label for="parameter">参数：</label>
                                     <p>
-                                        <select name="" id="parameter" class="selectpicker show-tick form-control" data-hide-disabled="true" data-live-search="true">
+                                        <select name="" id="parameter" multiple class="selectpicker show-tick form-control" data-hide-disabled="true" data-live-search="true">
                                             <optgroup>
                                                 <option value="">所有参数</option>
                                             </optgroup>
@@ -252,12 +252,12 @@
                                         </select>
                                     </p>
                                 </div>
-                                <div>
-                                    <label for="alarmLevel">超标级别：</label>
+                                <div class="alarmLevel">
+                                    <label for="alarmLevel">超标程度：</label>
                                     <p>
                                         <select name="" id="alarmLevel" class="selectpicker show-tick form-control" data-hide-disabled="true" data-live-search="true">
                                             <optgroup>
-                                                <option value="">所有级别</option>
+                                                <option value="">所有类型</option>
                                             </optgroup>
                                             <optgroup>
                                                 <option value="">一般超标</option>
@@ -285,7 +285,7 @@
                                 <thead>
                                     <tr>
                                         <th></th>
-                                        <th>告警类型</th>
+                                        <th>超标程度</th>
                                         <th>告警描述</th>
                                         <th>告警时间</th>
                                         <th>消警时间</th>
@@ -324,7 +324,7 @@
                     </div>
                 </div>
                 <!--告警通知配置-->
-                <div class="messageAlarm selected">
+                <div class="messageAlarm">
                     <div class="messageAlarmSelect">
                         <h2><var>筛选</var></h2>
                         <div class="messageAlarmSelectCon clearfix">
@@ -344,7 +344,7 @@
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th></th>
+                                        <th>编号</th>
                                         <th>
                                             <input type="checkbox" id="messageAll" name="checkboxSelect">
                                             <label for="messageAll" name="checkboxSelect"></label>
@@ -356,8 +356,8 @@
                                         <th>操作</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
+                                <tbody class="tbodyCon">
+                                    <tr id="1">
                                         <td>1</td>
                                         <td>
                                             <input type="checkbox" id="messageOther-1" name="checkboxSelect">
@@ -372,7 +372,7 @@
                                             <span class="message-delete">删除</span>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <tr id="2">
                                         <td>2</td>
                                         <td>
                                             <input type="checkbox" id="messageOther-2" name="checkboxSelect">
@@ -434,7 +434,7 @@
             <input type="text" id="messageName">
         </div>
         <div>
-            <h3>检测数据类型</h3>
+            <h3>告警类型</h3>
             <ul class="clearfix">
                 <li>
                     <input type="checkbox" id="checkData-1" name="checkboxSelect">
@@ -554,7 +554,7 @@
             <input type="text" id="addmessageName">
         </div>
         <div>
-            <h3>检测数据类型</h3>
+            <h3>告警类型</h3>
             <ul class="clearfix">
                 <li>
                     <input type="checkbox" id="addcheckData-1" name="checkboxSelect">

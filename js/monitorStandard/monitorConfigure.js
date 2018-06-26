@@ -24,7 +24,7 @@ $(function(){
             content: html,
             cancelValue: "取消",
             cancel: true,
-            okValue: "确定",
+            okValue: "保存",
             ok: function(){
                 $("input[type=submit]").click();
                 var cb = $(".form").validate().form();
@@ -90,7 +90,7 @@ function addStandard(){
     } else {
         index = "五";
     }
-    var th1 = "<th colspan='2' class='twoType'><var>地表水环境质量"+index+"类标准</var><span onclick='delStandard()'></span></th>";
+    var th1 = "<th colspan='2' class='twoType'><input type='text' value='地表水环境质量"+index+"类标准'><span onclick='delStandard()'></span></th>";
     var th2 = "<th>下限(>)</th><th>上限(≤)</th>";
     var td = "<td class='addInput'><input type='text'></td>";
     $(".editStandard thead tr:nth-child(1)").append(th1);
@@ -127,7 +127,7 @@ function newStandard(){
     } else {
         index = "五";
     }
-    var th1 = "<th colspan='2' class='twoType'><var>地表水环境质量"+index+"类标准</var><span onclick='newdelStandard()'></span></th>";
+    var th1 = "<th colspan='2' class='twoType'><input type='text' value='地表水环境质量"+index+"类标准'><span onclick='newdelStandard()'></span></th>";
     var th2 = "<th>下限(>)</th><th>上限(≤)</th>";
     var td = "<td class='addInput'><input type='text'></td>";
     $(".addStd thead tr:nth-child(1)").append(th1);

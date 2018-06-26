@@ -39,7 +39,7 @@
         <div class="wrapCon">
             <div class="nowAddr clearfix">
                 <span>当前位置：</span>
-                <p><a href="#" class="contentName">白马河站</a>&nbsp;/&nbsp;<var class="navName">站点信息管理</var></p>
+                <p><var class="navName">站点信息管理</var></p>
             </div>
             <div class="infoManage">
                 <div class="infoManageSelect">
@@ -54,7 +54,7 @@
                                 </select>
                             </p>
                         </div>
-                        <div>
+                        <div style="display: none;">
                             <label for="">监控类型：</label>
                             <p>
                                 <select name="" id="" class="selectpicker show-tick form-control" data-hide-disabled="true" data-live-search="true">
@@ -71,7 +71,7 @@
                             <label for="siteSearch">站点搜索：</label>
                             <input type="text" id="siteSearch" placeholder="请输入站点名称">
                         </div>
-                        <a href="#" class="determine">搜索</a>
+                        <a href="#" class="determine">查询</a>
                     </div>
                 </div>
                 <div class="siteInfo">
@@ -83,28 +83,30 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr>
+                                    <th>编号</th>
                                     <th>
                                         <input type="checkbox" id="siteInfoAll" name="checkboxSelect">
                                         <label for="siteInfoAll" name="checkboxSelect"></label>
                                     </th>
                                     <th>所属区域</th>
                                     <th>站点名称</th>
-                                    <th>监控类型</th>
+                                    <!--<th>监控类型</th>-->
                                     <th>负责人</th>
                                     <th>联系方式</th>
                                     <th>设备管理</th>
                                     <th>操作</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="tbodyCon">
                                 <tr>
+                                    <td>1</td>
                                     <td>
                                         <input type="checkbox" id="siteInfoOther-1" name="checkboxSelect">
                                         <label for="siteInfoOther-1" name="checkboxSelect"></label>
                                     </td>
                                     <td>福州市</td>
                                     <td class="siteName">白马河站</td>
-                                    <td>市控</td>
+                                    <!--<td>市控</td>-->
                                     <td>运维007</td>
                                     <td>12312312312</td>
                                     <td>
@@ -116,13 +118,14 @@
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td>2</td>
                                     <td>
                                         <input type="checkbox" id="siteInfoOther-2" name="checkboxSelect">
                                         <label for="siteInfoOther-2" name="checkboxSelect"></label>
                                     </td>
                                     <td>福州市</td>
                                     <td class="siteName">白马河站</td>
-                                    <td>市控</td>
+                                    <!--<td>市控</td>-->
                                     <td>运维007</td>
                                     <td>12312312312</td>
                                     <td>
@@ -217,7 +220,7 @@
                 </li>
                 <li>
                     <div>
-                        <label for="">监管类型：</label>
+                        <label for="">监控类型：</label>
                         <p>
                             <select name="" id="" class="selectpicker show-tick form-control" data-hide-disabled="true" data-live-search="true">
                                 <option value="">国控</option>
@@ -287,8 +290,8 @@
                 <li>
                     <div>
                         <label for="">执行标准：</label>
-                        <select name="" id="addexcecuteStandard">
-                            <option value="">地表水环境质量一类标准</option>
+                        <select name="" id="addexcecuteStandard" style="width:240px;">
+                            <option value="">地表水环境质量标准</option>
                         </select>
                     </div>
                 </li>
@@ -333,7 +336,7 @@
                 </li>
                 <li>
                     <div>
-                        <label for="">监管类型：</label>
+                        <label for="">监控类型：</label>
                         <select name="" id="">
                             <option value="">国控</option>
                             <option value="">省控</option>
@@ -401,8 +404,8 @@
                 <li>
                     <div>
                         <label for="">执行标准：</label>
-                        <select name="" id="excecuteStandard">
-                            <option value="">地表水环境质量一类标准</option>
+                        <select name="" id="excecuteStandard" style="width:240px;">
+                            <option value="">地表水环境质量标准</option>
                         </select>
                     </div>
                 </li>
