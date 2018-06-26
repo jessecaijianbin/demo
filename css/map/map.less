@@ -2,6 +2,17 @@
 .table-div {
   &:first-child {
     width: 45%;
+    a {
+      color: #2eadfc;
+    }
+    .img-td {
+      font-size: 0;
+      img {
+        width: 17px;
+        height: 20.4px;
+        cursor: pointer;
+      }
+    }
   }
   &:nth-child(2) {
     width: 55%;
@@ -9,6 +20,11 @@
     th, td {
       &:first-child {
         border-left: 0;
+      }
+    }
+    td {
+      &:first-child {
+        min-width: 180px;
       }
     }
   }
