@@ -11,7 +11,7 @@ $(function(){
 });
 // 全选
 function selectAll(all,childInput,childrenInputLength,inputCheckedLength){
-    alert("我被调用了");
+    // alert("我被调用了");
     $(all).change(function(){
         var isCheck=$(all).is(':checked');
         $(childInput).each(function() {

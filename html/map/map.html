@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/less" href="../../css/common.less" />
     <link rel="stylesheet" type="text/less" href="../../css/dataManage/common.less" />
     <!--页面特有css-->
-    <link rel="stylesheet" type="text/less" href="../../css/reportForm/monitorData.less">
+    <link rel="stylesheet" type="text/less" href="../../css/map/map.less">
     <link rel="stylesheet" type="text/css" href="../../js/time/skin/WdatePicker.css" />
     <link rel="stylesheet" type="text/css" href="../../js/time/skin/default/datepicker.css" />
     <link rel="stylesheet" type="text/css" href="../../js/time/skin/whyGreen/datepicker.css" />
@@ -62,27 +62,31 @@
                                     <label for="" class="fl">参数选择：</label>
                                     <div class="r-checkbox">
                                         <span>
-                                            <input type="checkbox" id="params1"/>
+                                            <input type="checkbox" id="all"/>
+                                            <label for="all" name="cblab">全选</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" id="params1" class="params-c"/>
                                             <label for="params1" name="cblab">流速</label>
                                         </span>
                                         <span>
-                                            <input type="checkbox" id="params2"/>
+                                            <input type="checkbox" id="params2" class="params-c"/>
                                             <label for="params2" name="cblab">水温</label>
                                         </span>
                                         <span>
-                                            <input type="checkbox" id="params3"/>
+                                            <input type="checkbox" id="params3" class="params-c"/>
                                             <label for="params3" name="cblab">氨氮</label>
                                         </span>
                                         <span>
-                                            <input type="checkbox" id="params4"/>
+                                            <input type="checkbox" id="params4" class="params-c"/>
                                             <label for="params4" name="cblab">溶解氧</label>
                                         </span>
                                         <span>
-                                            <input type="checkbox" id="params5"/>
+                                            <input type="checkbox" id="params5" class="params-c"/>
                                             <label for="params5" name="cblab">水位</label>
                                         </span>
                                         <span>
-                                            <input type="checkbox" id="params6"/>
+                                            <input type="checkbox" id="params6" class="params-c"/>
                                             <label for="params6" name="cblab">总磷</label>
                                         </span>
                                     </div>
@@ -96,15 +100,15 @@
                     <div class="screen ctx-wrap">
                         <h2 class="clearfix">
                             <var>实时监控列表</var>
-                            <div class="fr">
+                            <div class="fr date-fr">
                                 <label for="">站点状态：</label>
-                                在线<span>2</span>个
-                                离线<span>1</span>个
-                                超标<span>1</span>个
+                                在线<span class="num1">2</span>个
+                                离线<span class="num2">1</span>个
+                                超标<span class="num3">1</span>个
                             </div>
                         </h2>
                         <div class="screenCon clearfix">
-                            <div class="fl">
+                            <div class="fl table-div">
                                 <table class="table table-striped table-wrap">
                                     <thead>
                                     <tr>
@@ -148,46 +152,66 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="fr">
+                            <div class="fl table-div">
                                 <table class="table table-striped table-wrap">
                                     <thead>
                                     <tr>
-                                        <th>编号</th>
-                                        <th>所属区域</th>
-                                        <th>流域名称</th>
-                                        <th>站点名称</th>
-                                        <th>状态</th>
-                                        <th>变化趋势</th>
-                                        <th>视频监控</th>
+                                        <th>数据时间</th>
+                                        <th>pH(无量纲)</th>
+                                        <th>溶解氧(mg/L)</th>
+                                        <th>浊度(NTU)</th>
+                                        <th>氨氮(mg/L)</th>
+                                        <th>电导率(μS/cm)</th>
+                                        <th>氨氮(mg/L)</th>
+                                        <th>总氮(mg/L)</th>
+                                        <th>总磷(mg/L)</th>
+                                        <th>CODMn(mg/L)</th>
+                                        <th>总磷(mg/L)</th>
+                                        <th>CODMn(mg/L)</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td>1</td>
-                                        <td>福州市</td>
-                                        <td>福州市内河</td>
-                                        <td>白马河站</td>
-                                        <td>正常</td>
-                                        <td></td>
-                                        <td>查看视频</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
                                     </tr>
                                     <tr>
-                                        <td>1</td>
-                                        <td>福州市</td>
-                                        <td>福州市内河</td>
-                                        <td>白马河站</td>
-                                        <td>正常</td>
-                                        <td></td>
-                                        <td>查看视频</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
                                     </tr>
                                     <tr>
-                                        <td>1</td>
-                                        <td>福州市</td>
-                                        <td>福州市内河</td>
-                                        <td>白马河站</td>
-                                        <td>正常</td>
-                                        <td></td>
-                                        <td>查看视频</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
+                                        <td>4.89</td>
                                     </tr>
                                     </tbody>
                                 </table>
