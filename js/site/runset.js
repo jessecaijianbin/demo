@@ -2,7 +2,7 @@
 * @Author: 杨玉飞
 * @Date:   2018-05-28 11:21:56
 * @Last Modified by:   anchen
-* @Last Modified time: 2018-05-31 15:00:38
+* @Last Modified time: 2018-06-26 16:39:51
 */
 
 $(document).ready(function(){
@@ -98,8 +98,10 @@ $(document).ready(function(){
 // 常规监测模式设置-设置-按次数和按天数的切换
 function secondOrDay(){
     if($("#second").is(":checked")){
+        $(".settime").hide();
         $(".accordionToSecond").addClass("selected").siblings().removeClass("selected");
     }else{
+        $(".settime").show();
         $(".accordionToDay").addClass("selected").siblings().removeClass("selected");
     }
 }
