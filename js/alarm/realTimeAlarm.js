@@ -42,7 +42,7 @@ $(function(){
     $(".message-delete").click(function(){
         dialog({
             title: "删除提示",
-            content: "确定删除告警吗？",
+            content: "确定删除该通知规则吗？",
             okValue: "确定",
             cancelValue: "返回",
             cancel: true,
@@ -60,7 +60,7 @@ $(function(){
         if(checkedArr.length <= 0){
             dialog({
                 title: "提示",
-                content: "请选择要删除的告警",
+                content: "请选择要删除的通知规则",
                 okValue: "确定",
                 ok: true,
                 cancelValue: "取消",
@@ -69,7 +69,7 @@ $(function(){
         }else{
             dialog({
                 title: "删除提示",
-                content: "确定要删除这些告警的数据吗？",
+                content: "确定要删除这些通知规则吗？",
                 cancelValue: "取消",
                 cancel: true,
                 okValue: "确定",

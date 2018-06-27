@@ -38,7 +38,7 @@
                 <div class="monitorSelect">
                     <h2 class="clearfix"><var>筛选</var></h2>
                     <div class="monitorSelectCon">
-                        <label for="standardName">标准名称：</label>
+                        <label for="standardName">标准组名称：</label>
                         <input type="text" id="standardName">
                         <a href="#" class="monitorSearch">搜索</a>
                     </div>
@@ -53,15 +53,23 @@
                             <thead>
                                 <tr>
                                     <th>编号</th>
+                                    <th>
+                                        <input type="checkbox" id="monitorAll" name="checkboxSelect">
+                                        <label for="monitorAll" name="checkboxSelect"></label>
+                                    </th>
                                     <th>标准组名称</th>
-                                    <th>标准简介</th>
+                                    <th>标准组简介</th>
                                     <th>关联站点</th>
                                     <th>操作</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
+                            <tbody class="tbodyCon">
+                                <tr id="1">
                                     <td>1</td>
+                                    <td>
+                                        <input type="checkbox" id="monitorOther-1" name="checkboxSelect">
+                                        <label for="monitorOther-1" name="checkboxSelect"></label>
+                                    </td>
                                     <td>地表水环境质量标准</td>
                                     <td>111</td>
                                     <td><a href="#" class="linkSite">白马河</a></td>
@@ -70,8 +78,12 @@
                                         <span class="monitor-delete">删除</span>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="2">
                                     <td>2</td>
+                                    <td>
+                                        <input type="checkbox" id="monitorOther-2" name="checkboxSelect">
+                                        <label for="monitorOther-2" name="checkboxSelect"></label>
+                                    </td>
                                     <td>地表水环境质量标准</td>
                                     <td>111</td>
                                     <td><a href="#" class="linkSite">白马河</a></td>
@@ -110,7 +122,7 @@
                     <option value="">111</option>
                 </select>
             </p>
-            <a href="#" class="linkSiteList-search">搜索</a>
+            <a href="#" class="linkSiteList-search">查询</a>
         </div>
         <div class="linkSiteListCon">
             <table class="table table-striped">
@@ -168,12 +180,12 @@
         <div class="editStandard">
             <h3>编辑标准</h3>
             <div class="clearfix">
-                <label for="standardName2">标准名称：</label>
+                <label for="standardName2">标准组名称：</label>
                 <input type="text" id="standardName2" required>
                 <span>*</span>
             </div>
             <div class="clearfix">
-                <label for="standardIntroduce">标准简介：</label>
+                <label for="standardIntroduce">标准组简介：</label>
                 <textarea name="" id="standardIntroduce"></textarea>
             </div>
             <h3 class="childList">
@@ -233,12 +245,12 @@
         <div class="addStd">
             <h3>编辑标准</h3>
             <div class="clearfix">
-                <label for="addstandardName2">标准名称：</label>
+                <label for="addstandardName2">标准组名称：</label>
                 <input type="text" id="addstandardName2" required>
                 <span>*</span>
             </div>
             <div class="clearfix">
-                <label for="addstandardIntroduce">标准简介：</label>
+                <label for="addstandardIntroduce">标准组简介：</label>
                 <textarea name="" id="addstandardIntroduce"></textarea>
             </div>
             <h3 class="childList">

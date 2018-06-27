@@ -68,24 +68,22 @@
                                         <th>操作</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <for>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>
-                                                <input type="checkbox" id="equipOther-1" name="checkboxSelect">
-                                                <label for="equipOther-1" name="checkboxSelect"></label>
-                                            </td>
-                                            <td class="paraName">1234</td>
-                                            <td>TP001</td>
-                                            <td>OTS001</td>
-                                            <td>总磷、总氮</td>
-                                            <td>
-                                                <span class="equipInfo-detail">详情</span>
-                                                <span class="equipInfo-delete">删除</span>
-                                            </td>
-                                        </tr>
-                                    </for>
+                                <tbody class="tbodyCon">
+                                    <tr id="1">
+                                        <td>1</td>
+                                        <td>
+                                            <input type="checkbox" id="equipOther-1" name="checkboxSelect">
+                                            <label for="equipOther-1" name="checkboxSelect"></label>
+                                        </td>
+                                        <td class="paraName">1234</td>
+                                        <td>TP001</td>
+                                        <td>OTS001</td>
+                                        <td>总磷、总氮</td>
+                                        <td>
+                                            <span class="equipInfo-detail">详情</span>
+                                            <span class="equipInfo-delete">删除</span>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                             <div>
@@ -129,8 +127,8 @@
                                     <th>操作</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr>
+                                <tbody class="tbodyCon">
+                                <tr id="1">
                                     <td>1</td>
                                     <td>
                                         <input type="checkbox" id="instrumentOther-1" name="checkboxSelect">
@@ -145,7 +143,7 @@
                                         <span class="instrument-delete">删除</span>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="2">
                                     <td>2</td>
                                     <td>
                                         <input type="checkbox" id="instrumentOther-2" name="checkboxSelect">
@@ -160,7 +158,7 @@
                                         <span class="instrument-delete">删除</span>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="3">
                                     <td>3</td>
                                     <td>
                                         <input type="checkbox" id="instrumentOther-3" name="checkboxSelect">
@@ -206,7 +204,7 @@
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th></th>
+                                        <th>编号</th>
                                         <th>
                                             <input type="checkbox" id="videoAll" name="checkboxSelect">
                                             <label for="videoAll" name="checkboxSelect"></label>
@@ -220,8 +218,8 @@
                                         <th>操作</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
+                                <tbody class="tbodyCon">
+                                    <tr id="1">
                                         <td>1</td>
                                         <td>
                                             <input type="checkbox" id="videOther-1" name="checkboxSelect">
@@ -234,11 +232,11 @@
                                         <td>admin</td>
                                         <td>admin_123</td>
                                         <td>
-                                            <span class="video-detail">详细</span>
+                                            <span class="video-detail">详情</span>
                                             <span class="video-delete">删除</span>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <tr id="2">
                                         <td>2</td>
                                         <td>
                                             <input type="checkbox" id="videOther-2" name="checkboxSelect">
@@ -251,11 +249,11 @@
                                         <td>admin</td>
                                         <td>admin_123</td>
                                         <td>
-                                            <span class="video-detail">详细</span>
+                                            <span class="video-detail">详情</span>
                                             <span class="video-delete">删除</span>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <tr id="3">
                                         <td>3</td>
                                         <td>
                                             <input type="checkbox" id="videOther-3" name="checkboxSelect">
@@ -268,7 +266,7 @@
                                         <td>admin</td>
                                         <td>admin_123</td>
                                         <td>
-                                            <span class="video-detail">详细</span>
+                                            <span class="video-detail">详情</span>
                                             <span class="video-delete">删除</span>
                                         </td>
                                     </tr>
@@ -363,7 +361,7 @@
         </div>
         <div class="monitorData">
             <div class="clearfix">
-                <h3>监测数据</h3>
+                <h3>监测参数</h3>
                 <a href="#" class="monitor-add-perameter" onclick="addNewPerameter()">新增参数</a>
             </div>
             <table class="table table-striped">
@@ -802,7 +800,7 @@
         </div>
         <div class="addVideoPara">
             <div class="clearfix">
-                <h3>监测数据</h3>
+                <h3>视频监控信息</h3>
             </div>
             <ul class="addVideoPara-info">
                 <li class="clearfix">
@@ -924,7 +922,7 @@
         </div>
         <div class="editVideoPara">
             <div class="clearfix">
-                <h3>监测数据</h3>
+                <h3>视频监控信息</h3>
             </div>
             <ul class="editVideoPara-info">
                 <li class="clearfix">

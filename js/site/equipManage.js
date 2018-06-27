@@ -75,17 +75,34 @@ $(function(){
     })
     // 监测设备管理-批量删除
     $(".equipInfo-deleteBatch").click(function(){
-        dialog({
-            title: "删除提示",
-            content: "确定要删除这些监测设备的数据吗？",
-            cancelValue: "取消",
-            cancel: true,
-            okValue: "确定",
-            ok: function(){
-
+        var checkedArr = [];
+        $(".tbodyCon tr").each(function(){
+            if($(this).find("input").is(":checked")){
+                checkedArr.push($(this).attr("id"));
             }
-        }).showModal();
-        deleteCss(); //删除的样式
+        })
+        if(checkedArr.length <= 0){
+            dialog({
+                title: "提示",
+                content: "请选择要删除的监测设备",
+                okValue: "确定",
+                ok: true,
+                cancelValue: "取消",
+                cancel: true,
+            }).showModal();
+        }else{
+            dialog({
+                title: "删除提示",
+                content: "确定要删除这些监测设备的数据吗？",
+                cancelValue: "取消",
+                cancel: true,
+                okValue: "确定",
+                ok: function(){
+
+                }
+            }).showModal();
+            deleteCss(); //删除的样式
+        }
     })
 
     // 数采仪管理-编辑数采仪设备
@@ -149,17 +166,34 @@ $(function(){
     })
     // 数采仪管理-批量删除
     $(".instrument-deleteBatch").click(function(){
-        dialog({
-            title: "删除提示",
-            content: "确定要删除这些数采仪设备的数据吗？",
-            cancelValue: "取消",
-            cancel: true,
-            okValue: "确定",
-            ok: function(){
-
+        var checkedArr = [];
+        $(".tbodyCon tr").each(function(){
+            if($(this).find("input").is(":checked")){
+                checkedArr.push($(this).attr("id"));
             }
-        }).showModal();
-        deleteCss(); //删除的样式
+        })
+        if(checkedArr.length <= 0){
+            dialog({
+                title: "提示",
+                content: "请选择要删除的数采仪设备",
+                okValue: "确定",
+                ok: true,
+                cancelValue: "取消",
+                cancel: true,
+            }).showModal();
+        }else{
+            dialog({
+                title: "删除提示",
+                content: "确定要删除这些数采仪设备的数据吗？",
+                cancelValue: "取消",
+                cancel: true,
+                okValue: "确定",
+                ok: function(){
+
+                }
+            }).showModal();
+            deleteCss(); //删除的样式
+        }
     })
 
     // 视频监控设备管理-新增视频监控设备
@@ -222,17 +256,34 @@ $(function(){
     })
     // 视频监控设备管理-批量删除
     $(".video-deleteBatch").click(function(){
-        dialog({
-            title: "删除提示",
-            content: "确定要删除这些视频监控设备的数据吗？",
-            cancelValue: "取消",
-            cancel: true,
-            okValue: "确定",
-            ok: function(){
-
+        var checkedArr = [];
+        $(".tbodyCon tr").each(function(){
+            if($(this).find("input").is(":checked")){
+                checkedArr.push($(this).attr("id"));
             }
-        }).showModal();
-        deleteCss(); //删除的样式
+        })
+        if(checkedArr.length <= 0){
+            dialog({
+                title: "提示",
+                content: "请选择要删除的视频监控设备",
+                okValue: "确定",
+                ok: true,
+                cancelValue: "取消",
+                cancel: true,
+            }).showModal();
+        }else{
+            dialog({
+                title: "删除提示",
+                content: "确定要删除这些视频监控设备的数据吗？",
+                cancelValue: "取消",
+                cancel: true,
+                okValue: "确定",
+                ok: function(){
+
+                }
+            }).showModal();
+            deleteCss(); //删除的样式
+        }
     })
     // 搜索树
     treeSearch();

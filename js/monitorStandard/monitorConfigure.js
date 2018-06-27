@@ -1,4 +1,6 @@
 $(function(){
+    // 监测设备信息-表格全选
+    selectAll("#monitorAll",".monitorSdCon td input[type='checkbox']",".monitorSdCon tbody tr",".monitorSdCon td input:checked");
     // 关联站点
     $(".linkSite").click(function(){
         var html =template("linkSiteList");

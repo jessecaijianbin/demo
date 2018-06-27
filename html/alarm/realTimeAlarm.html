@@ -126,7 +126,7 @@
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
-                                    <th></th>
+                                    <th>编号</th>
                                     <th>超标程度</th>
                                     <th>告警描述</th>
                                     <th>告警时间</th>
@@ -208,27 +208,27 @@
                                     <input readonly="readonly" type="text" class="Wdate" id="startTime" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})"/>
                                 </div>
                                 <div>
-                                    <label for="endTime">开始时间：</label>
+                                    <label for="endTime">结束时间：</label>
                                     <input readonly="readonly" type="text" class="Wdate" id="endTime" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})"/>
                                 </div>
-                                <div>
-                                    <label for="parameter">参数：</label>
-                                    <p>
-                                        <select name="" id="parameter" multiple class="selectpicker show-tick form-control" data-hide-disabled="true" data-live-search="true">
-                                            <optgroup>
-                                                <option value="">所有参数</option>
-                                            </optgroup>
-                                            <optgroup>
-                                                <option value="">流速</option>
-                                                <option value="">水温</option>
-                                                <option value="">溶解氧</option>
-                                                <option value="">氨氮</option>
-                                                <option value="">水位</option>
-                                                <option value="">总磷</option>
-                                            </optgroup>
-                                        </select>
-                                    </p>
-                                </div>
+                                <!--<div>-->
+                                    <!--<label for="parameter">参数：</label>-->
+                                    <!--<p>-->
+                                        <!--<select name="" id="parameter" multiple class="selectpicker show-tick form-control" data-hide-disabled="true" data-live-search="true">-->
+                                            <!--<optgroup>-->
+                                                <!--<option value="">所有参数</option>-->
+                                            <!--</optgroup>-->
+                                            <!--<optgroup>-->
+                                                <!--<option value="">流速</option>-->
+                                                <!--<option value="">水温</option>-->
+                                                <!--<option value="">溶解氧</option>-->
+                                                <!--<option value="">氨氮</option>-->
+                                                <!--<option value="">水位</option>-->
+                                                <!--<option value="">总磷</option>-->
+                                            <!--</optgroup>-->
+                                        <!--</select>-->
+                                    <!--</p>-->
+                                <!--</div>-->
                             </div>
                             <div class="clearfix">
                                 <div>
@@ -267,6 +267,35 @@
                                         </select>
                                     </p>
                                 </div>
+                            </div>
+                            <div class="clearfix">
+                                <label for="">参数选择：</label>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" id="para2-1" name="checkboxSelect">
+                                        <label for="para2-1" name="checkboxSelect">流速</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="para2-2" name="checkboxSelect">
+                                        <label for="para2-2" name="checkboxSelect">水温</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="para2-3" name="checkboxSelect">
+                                        <label for="para2-3" name="checkboxSelect">氨氮</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="para2-4" name="checkboxSelect">
+                                        <label for="para2-4" name="checkboxSelect">溶解氧</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="para2-5" name="checkboxSelect">
+                                        <label for="para2-5" name="checkboxSelect">水位</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="para2-6" name="checkboxSelect">
+                                        <label for="para2-6" name="checkboxSelect">总磷</label>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="clearfix">
                                 <a href="#" class="historySearch">查询</a>
