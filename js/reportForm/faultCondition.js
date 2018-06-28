@@ -1,5 +1,6 @@
 
 $(function() {
+    $('#myChart').css({height: '320px'})
     _initChart()
 })
 
