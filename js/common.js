@@ -8,6 +8,10 @@
 $(function(){
     $(".headTitle").load("../tpl/header.html");
     $(".nav").load("../tpl/nav.html");
+
+    // 初始化图表宽度
+    var width = $(document).width() * 0.85 - 40
+    $('.chartBox').css({width: width + 'px'})
 });
 // 全选
 function selectAll(all,childInput,childrenInputLength,inputCheckedLength){
@@ -249,4 +253,3 @@ function getWeekList(year) {
     }
     return weekList
 }
-
