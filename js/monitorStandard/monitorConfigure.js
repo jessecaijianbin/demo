@@ -22,7 +22,7 @@ $(function(){
     $(".monitor-detail").click(function(){
         var html =template("editStandard");
         dialog({
-            title: "编辑监测标准配置",
+            title: "编辑监测标准组",
             content: html,
             cancelValue: "取消",
             cancel: true,
@@ -43,7 +43,7 @@ $(function(){
     $(".addMonitor").click(function(){
         var html =template("addStd");
         dialog({
-            title: "新增监测标准配置",
+            title: "新增监测标准组",
             content: html,
             cancelValue: "取消",
             cancel: true,
