@@ -10,7 +10,7 @@ $(function(){
     $(".nav").load("../tpl/nav.html");
 
     // 初始化图表宽度高度
-    var width = $(document).width() * 0.85 - 40
+    var width = $(document).width() * 0.85 - 88
     $('.chartBox').css({width: width + 'px' , height: '400px'})
 });
 // 全选

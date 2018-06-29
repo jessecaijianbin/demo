@@ -45,6 +45,9 @@ function _initChart () {
                 nameLocation:'middle',
                 nameGap: 35,
                 type : 'value',
+                nameTextStyle: {
+                    color: '#666666'
+                },
                 axisTick: {
                     show: false
                 },

@@ -62,6 +62,9 @@ var option = {
     yAxis: [{
         type: 'value',
         name: '单位：mg/L',
+        nameTextStyle: {
+            color: '#666666'
+        },
         axisTick: {
             show: false
         },

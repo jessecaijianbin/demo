@@ -45,6 +45,9 @@ function _initChart () {
                 axisTick: {
                     show: false
                 },
+                nameTextStyle: {
+                  color: '#666666'
+                },
                 axisLine: {
                     lineStyle: {
                         color: '#E3E3E3'
