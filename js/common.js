@@ -7,22 +7,11 @@
 
 $(function(){
     $(".headTitle").load("../tpl/header.html");
-    $(".nav").load("../tpl/nav.html", function () {
-        // 重新设置导航栏滚动条位置
-        var scrollTop = localStorage.getItem('scrollTop')
-        if (scrollTop > 0) {
-            $('.navDiv').scrollTop(scrollTop)
-        }
-    });
+    $(".nav").load("../tpl/nav.html");
 
     // 初始化图表宽度高度
     var width = $(document).width() * 0.85 - 88
     $('.chartBox').css({width: width + 'px' , height: '400px'})
-
-    // 页面跳转记录导航栏滚动条位置
-    $(document).on('click', '.navUl a', function () {
-        localStorage.setItem('scrollTop', $('.navDiv').scrollTop())
-    })
 });
 // 全选
 function selectAll(all,childInput,childrenInputLength,inputCheckedLength){
