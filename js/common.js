@@ -9,9 +9,7 @@ $(function(){
     $(".headTitle").load("../tpl/header.html");
     $(".nav").load("../tpl/nav.html");
 
-    // 初始化图表宽度高度
-    var width = $(document).width() * 0.85 - 88
-    $('.chartBox').css({width: width + 'px' , height: '400px'})
+    initChartWH(0)
 });
 // 全选
 function selectAll(all,childInput,childrenInputLength,inputCheckedLength){
@@ -252,4 +250,13 @@ function getWeekList(year) {
         i++;
     }
     return weekList
+}
+
+// 初始化图表宽度高度
+function initChartWH (type) {
+    var width = '100%'
+    if (parseInt(type) == 0) {
+        width = $(document).width() * 0.85 - 88 + 'px'
+    }
+    $('.chartBox').css({width: width, height: '400px'})
 }

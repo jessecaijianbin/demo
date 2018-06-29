@@ -111,7 +111,10 @@ function _initChart1 () {
     };
     myChart.setOption(option)
     // 根据屏幕自适应
-    window.onresize = myChart.resize;
+    $(window).on('resize', function () {
+        initChartWH()
+        myChart.resize()
+    })
 }
 
 // 水质评价图表
@@ -199,7 +202,10 @@ function _initChart2 () {
     };
     myChart.setOption(option)
     // 根据屏幕自适应
-    window.onresize = myChart.resize;
+    $(window).on('resize', function () {
+        initChartWH()
+        myChart.resize()
+    })
 }
 
 // 把数值转换为罗马数字
