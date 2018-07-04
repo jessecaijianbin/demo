@@ -7,8 +7,9 @@
 
 $(function(){
     $(".headTitle").load("../tpl/header.html");
-    $(".nav").load("../tpl/nav.html");
+    $(".nav").load("../tpl/nav.html", function () {
 
+    });
     initChartWH(0)
 });
 // 全选

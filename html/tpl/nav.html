@@ -178,9 +178,20 @@
                 $(".navUl li").removeClass("active open");
                 $(".navUl ol").hide();
                 $(".navUl li a[href='../.."+aUrl+"']").parent("li").addClass("active").parent("ol").show().parent("li").addClass("active open");
+                
+                // 重新设置导航栏滚动条位置
+                var scrollTop = localStorage.getItem('scrollTop')
+                if (scrollTop > 0) {
+                    setTimeout(function () {
+                        $('.navDiv').scrollTop(parseInt(scrollTop))
+                    }, 50)
+                }
             }
         })
         $(".navUl >li").click(function(){
+            // 页面跳转记录导航栏滚动条位置
+            localStorage.setItem('scrollTop', $('.navDiv').scrollTop())
+
             $(this).toggleClass("open");
             if($(this).hasClass("open")){
                 $(this).find("ol").show(300).parent().siblings().removeClass("open").find("ol").hide(300);
