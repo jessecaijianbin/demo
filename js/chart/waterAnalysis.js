@@ -69,7 +69,6 @@ function _initChart1 () {
                 name:'水质比例',
                 type:'pie',
                 radius: ['20%', '65%'],
-                avoidLabelOverlap: false,
                 label: {
                     normal: {
                         formatter: '{b}：{d}%'

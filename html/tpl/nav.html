@@ -178,7 +178,7 @@
                 $(".navUl li").removeClass("active open");
                 $(".navUl ol").hide();
                 $(".navUl li a[href='../.."+aUrl+"']").parent("li").addClass("active").parent("ol").show().parent("li").addClass("active open");
-                
+
                 // 重新设置导航栏滚动条位置
                 var scrollTop = localStorage.getItem('scrollTop')
                 if (scrollTop > 0) {
