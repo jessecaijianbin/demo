@@ -268,7 +268,7 @@ body, html {
   height: 100%;
 }
 .navUl {
-  min-height: 900px;
+  min-height: 1200px;
     >li {
       @outerLiHegiht: 66px;
       padding-left: 9%;
@@ -768,4 +768,30 @@ body, html {
 
 ::-webkit-scrollbar-corner {
   background: transparent;
+}
+
+// 下拉树
+.dropdown-wrap {
+  position: relative;
+  display: inline-block;
+  .dropdown-tree {
+    width: 220px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-left: 12px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  .menuContent {
+    position: absolute;
+    width: 218px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #c3c4c3;
+    background-color: #fff;
+    display: none;
+    z-index: 98;
+  }
 }

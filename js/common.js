@@ -5,13 +5,12 @@
 * @Last Modified time: 2018-06-06 10:41:02
 */
 
-$(function(){
+/*$(function(){
     $(".headTitle").load("../tpl/header.html");
-    $(".nav").load("../tpl/nav.html", function () {
+    $(".nav").load("../tpl/nav.html");
 
-    });
     initChartWH(0)
-});
+});*/
 // 全选
 function selectAll(all,childInput,childrenInputLength,inputCheckedLength){
     // alert("我被调用了");
@@ -88,11 +87,62 @@ function treeSearch(){
             onClick: zTreeOnClick
         }
     };
+
+    //加载单位树  部门树  流域树  区域树  人员拥有权限单位树，人员拥有权限部门树 人员拥有区域权限树  人员拥有流域权限树
+    var deptNodes,
+        unitNodes,
+        basinNodes,
+        regionNodes,
+        userDeptNoes,
+        userUnitNodes,
+        userRegionNodes,
+        userBasinNodes;
+
+    //异步加载部门树
+    $.ajax({
+        url:"${basePath}/org/dept/tree.shtml",
+        data:null,
+        type:"get",
+        dataType:"json",
+        success:function(result){
+            debugger;
+        },
+        error:function(e){
+            console.log(e,e.message);
+        }
+
+    })
+
+
     var zNodes = [
-        {name:"test1", open:false, children:[
-                {name:"杨洋"}, {name:"test1_2"}]},
-        {name:"test2", open:false, children:[
-                {name:"test2_1"}, {name:"test2_2"},{name:"乔安"}]}
+        {
+            name: "test1",
+            open: false,
+            code:"01",
+            children: [{
+                name: "杨洋",
+                open:false,
+                code:"010",
+                children:[{
+                    name:"jacob",
+                    open: false,
+                    code:"0100",
+                    children:[]
+                }]
+            }, {
+                name: "test1_2"
+            }]
+        }, {
+            name: "test2",
+            open: false,
+            children: [{
+                name: "test2_1"
+            }, {
+                name: "test2_2"
+            }, {
+                name: "乔安"
+            }]
+        }
     ];
     var zNodes2 = [
         {name:"111", open:false, children:[
@@ -122,6 +172,7 @@ function treeSearch(){
 
 }
 function zTreeOnClick(event, treeId, treeNode){
+    debugger;
     console.log(treeNode);
 }
 function callNumber(){
@@ -261,3 +312,74 @@ function initChartWH (type) {
     }
     $('.chartBox').css({width: width, height: '400px'})
 }
+
+/*下拉树--start*/
+// 初始化树
+function dropdownTree (zNodes, treeId) {
+    var setting = {
+        view: {
+            selectedMulti: false //是否允许多选
+        },
+        data: {
+            simpleData: {
+                enable: true,
+                idKey: "id",
+                pIdKey: "pId",
+                rootPId: 0
+            }
+        },
+        callback: {
+            //zTree节点的点击事件
+            onClick: function () {
+                var zTree = $.fn.zTree.getZTreeObj(treeId);
+                //获得选中的节点
+                var nodes = zTree.getSelectedNodes(),
+                    v = "";
+                console.log(nodes)
+                //根据id排序
+                nodes.sort(function compare(a, b) { return a.id - b.id; });
+                for (var i = 0, l = nodes.length; i < l; i++) {
+                    if(i!==0){
+                        v +=","+nodes[i].name ;
+                    }
+                    v +=nodes[i].name;
+                }
+                //将选中节点的名称显示在文本框内
+                var ipt = $('#' + treeId).parent().siblings('.dropdown-tree')
+                ipt.val(v);
+                //隐藏zTree
+                hideMenu();
+                return false;
+            }
+        }
+    };
+
+    $.fn.zTree.init($("#" + treeId), setting, zNodes);
+    initEvent();
+}
+
+// 显示树
+function showMenu($obj) {
+    $(".menuContent").hide()
+    $obj.siblings('.menuContent').slideDown("fast")
+}
+
+//隐藏树
+function hideMenu() {
+    $(".menuContent").fadeOut("fast");
+}
+
+function initEvent(){
+    //鼠标获得焦点的时候，显示所有的树
+    $(".dropdown-tree").focus(function(e){
+        showMenu($(this));
+    });
+    // 点击外部区域隐藏
+    $(document).click(function () {
+        hideMenu();
+    })
+    $(document).on('click', '.dropdown-wrap', function (e) {
+        e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;
+    })
+}
+/*下拉树--end*/

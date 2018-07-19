@@ -1,0 +1,56 @@
+@import "../../css/dataManage/common.less";
+.ov-wrap {
+  .ov-c {
+    width: 50%;
+    padding-right: 10px;
+    .ov-list {
+      background-color: #fff;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .number-wrap {
+      height: 145px;
+      & > li {
+        width: 50%;
+        height: 100%;
+        & > div {
+          color: #006efe;
+          text-align: center;
+        }
+        &:first-child {
+          position: relative;
+          &:after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            background-color: #f1f1f1;
+            right: 0;
+            top: 20px;
+            bottom: 20px;
+          }
+        }
+      }
+    }
+    .chart-wrap {
+      .title {
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 30px;
+        border-bottom: 1px solid #f3f3f3;
+        &:before {
+          content: '';
+          position: absolute;
+          width: 3px;
+          height: 28px;
+          background-color: #20bbfe;
+          top: 6px;
+          left: 10px;
+        }
+      }
+    }
+  }
+}
