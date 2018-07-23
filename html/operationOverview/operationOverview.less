@@ -1,4 +1,7 @@
 @import "../../css/dataManage/common.less";
+.dataAndLongRangeCon {
+  padding: 20px 39px 20px 31px;
+}
 .ov-wrap {
   .ov-c {
     width: 50%;
@@ -6,19 +9,31 @@
     .ov-list {
       background-color: #fff;
       margin-bottom: 10px;
-      border-radius: 4px;
+      border-radius: 6px;
+      box-shadow: 0px 0px 5px 0px
+      rgba(6, 37, 88, 0.05);
       &:last-child {
         margin-bottom: 0;
       }
     }
     .number-wrap {
-      height: 145px;
+      height: 210px;
       & > li {
         width: 50%;
         height: 100%;
+        text-align: center;
+        padding-top: 46px;
         & > div {
           color: #006efe;
-          text-align: center;
+          line-height: 1;
+        }
+        .name {
+          font-size: 16px;
+          margin-top: 14px;
+        }
+        .num {
+          font-size: 32px;
+          margin-top: 23px;
         }
         &:first-child {
           position: relative;
@@ -26,10 +41,10 @@
             content: '';
             position: absolute;
             width: 1px;
-            background-color: #f1f1f1;
+            background-color: #eeeeee;
             right: 0;
-            top: 20px;
-            bottom: 20px;
+            top: 55px;
+            bottom: 55px;
           }
         }
       }
@@ -37,18 +52,28 @@
     .chart-wrap {
       .title {
         position: relative;
-        height: 40px;
-        line-height: 40px;
-        padding-left: 30px;
+        height: 45px;
+        line-height: 45px;
+        padding-left: 27px;
         border-bottom: 1px solid #f3f3f3;
+        color: #2b2b2b;
         &:before {
           content: '';
           position: absolute;
           width: 3px;
-          height: 28px;
+          height: 21px;
           background-color: #20bbfe;
-          top: 6px;
+          top: 13px;
           left: 10px;
+        }
+        .dataAndLongRange span{
+          font-size: 14px;
+          margin-right: 35px;
+          height: 44px;
+          line-height: 47px;
+          &:last-child {
+            margin-right: 0;
+          }
         }
       }
     }

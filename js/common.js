@@ -5,12 +5,12 @@
 * @Last Modified time: 2018-06-06 10:41:02
 */
 
-/*$(function(){
+$(function(){
     $(".headTitle").load("../tpl/header.html");
     $(".nav").load("../tpl/nav.html");
 
     initChartWH(0)
-});*/
+});
 // 全选
 function selectAll(all,childInput,childrenInputLength,inputCheckedLength){
     // alert("我被调用了");
